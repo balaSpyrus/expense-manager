@@ -14,7 +14,7 @@ const getDummyData = async () => {
   return data as ExpenseType[];
 };
 
-export const getExpenses = async () => {
+const getExpenses = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/expenses");
     const expenses = (await res.json()) as ExpenseType[];
