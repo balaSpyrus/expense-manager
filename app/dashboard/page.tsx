@@ -1,8 +1,9 @@
 import PieChart from "@/component/chart/pieChart";
-import ExpenseList from "@/component/expenseList";
-import { NextPage } from "next";
+import RightPane from "@/component/rightpane";
 import { ExpenseType } from "@/types";
+import { formatCategory, generateColor } from "@/utils";
 import { promises as fs } from "fs";
+import { NextPage } from "next";
 import styles from "./dashboard.module.css";
 
 const getDummyData = async () => {
@@ -27,13 +28,21 @@ const getExpenses = async () => {
 
 const Dashboard: NextPage = async () => {
   const expenses = await getExpenses();
+  const categorywiseInfo = expenses.reduce(
+    (expense, { total_amount, category }) => {
+      if (expense[category]) {
+        expense[category].amount += +total_amount;
+      } else {
+        expense[category] = {
+          amount: +total_amount,
 
-  const amounts = expenses.reduce(
-    (expense, acc) => ({
-      ...expense,
-      [acc.category]: (expense?.[acc.category] || 0) + +acc.total_amount,
-    }),
-    {} as Record<string, number>
+          color: generateColor(),
+          label: formatCategory(category),
+        };
+      }
+      return expense;
+    },
+    {} as Record<string, { amount: number; color: string; label: string }>
   );
 
   return (
@@ -43,15 +52,15 @@ const Dashboard: NextPage = async () => {
         <h1 className={styles["amt-container"]}>
           Total Expenses :{" "}
           <span className={styles.amount}>
-            {Object.values(amounts)
-              .reduce((acc, amount) => acc + +amount, 0)
+            {Object.values(categorywiseInfo)
+              .reduce((acc, { amount }) => acc + +amount, 0)
               .toFixed(2)}
             $
           </span>
         </h1>
-        <PieChart expenses={expenses} amounts={amounts} />
+        <PieChart categorywiseInfo={categorywiseInfo} />
       </section>
-      <ExpenseList expenses={expenses} />
+      <RightPane expenses={expenses} categorywiseInfo={categorywiseInfo} />
     </div>
   );
 };

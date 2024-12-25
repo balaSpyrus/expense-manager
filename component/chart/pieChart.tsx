@@ -1,24 +1,33 @@
 "use client";
-import React, { useMemo } from "react";
 import { ChartData, PieController } from "chart.js";
 import Chart from "chart.js/auto";
-import { ExpenseType } from "@/types";
+import { useMemo } from "react";
 import { Pie } from "react-chartjs-2";
-import { generateColor } from "@/utils";
 
 Chart.register(PieController);
 
 const PieChart = ({
-  expenses,
-  amounts,
+  categorywiseInfo,
 }: {
-  expenses: ExpenseType[];
-  amounts: Record<string, number>;
+  categorywiseInfo: Record<
+    string,
+    {
+      amount: number;
+      color: string;
+      label: string;
+    }
+  >;
 }) => {
   const data: ChartData<"pie", number[], unknown> = useMemo(() => {
-    const labels = [...new Set(expenses.map((expense) => expense.category))];
+    const labels: string[] = [];
+    const colors: string[] = [];
+    const data: number[] = [];
 
-    const colors = labels.map(generateColor);
+    Object.values(categorywiseInfo).forEach(({ amount, color, label }) => {
+      labels.push(label);
+      colors.push(color);
+      data.push(amount);
+    });
 
     return {
       labels,
@@ -27,12 +36,12 @@ const PieChart = ({
           label: "Total Expenses",
           backgroundColor: colors,
           borderColor: "black",
-          data: Object.values(amounts),
+          data,
           hoverOffset: 10,
         },
       ],
     };
-  }, [amounts, expenses]);
+  }, [categorywiseInfo]);
 
   return (
     <Pie

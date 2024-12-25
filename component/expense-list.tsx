@@ -11,14 +11,17 @@ import {
   ListRowRenderer,
 } from "react-virtualized";
 import "react-virtualized/styles.css";
-import ExpenseCard from "../expenseCard";
-import styles from "./expenseList.module.css";
+import ExpenseCard from "./expenseCard";
 
 interface Props {
   expenses: ExpenseType[];
+  categorywiseInfo: Record<
+    string,
+    { amount: number; color: string; label: string }
+  >;
 }
 
-const ExpenseList: FC<Props> = ({ expenses }) => {
+const ExpenseList: FC<Props> = ({ expenses, categorywiseInfo }) => {
   const cache = new CellMeasurerCache({
     fixedWidth: true,
     defaultHeight: 270, // Default height before measuring
@@ -60,7 +63,10 @@ const ExpenseList: FC<Props> = ({ expenses }) => {
       >
         {({ measure, registerChild }) => (
           <div onLoad={measure} key={key} style={style} ref={registerChild}>
-            <ExpenseCard {...item} />
+            <ExpenseCard
+              expense={item}
+              categoryInfo={categorywiseInfo[item.category]}
+            />
           </div>
         )}
       </CellMeasurer>
@@ -68,32 +74,29 @@ const ExpenseList: FC<Props> = ({ expenses }) => {
   };
 
   return (
-    <section className={styles.expenseContainer}>
-      <InfiniteLoader
-        isRowLoaded={isRowLoaded}
-        loadMoreRows={loadMoreRows}
-        rowCount={expenses.length}
-      >
-        {({ onRowsRendered, registerChild }) => (
-          <AutoSizer>
-            {({ width, height }) => (
-              <List
-                height={height}
-                onRowsRendered={onRowsRendered}
-                ref={registerChild}
-                rowCount={expenses.length}
-                rowHeight={cache.rowHeight}
-                rowRenderer={rowRenderer}
-                width={width}
-                deferredMeasurementCache={cache}
-                overscanRowCount={6}
-              />
-            )}
-          </AutoSizer>
-        )}
-      </InfiniteLoader>
-      ,
-    </section>
+    <InfiniteLoader
+      isRowLoaded={isRowLoaded}
+      loadMoreRows={loadMoreRows}
+      rowCount={expenses.length}
+    >
+      {({ onRowsRendered, registerChild }) => (
+        <AutoSizer>
+          {({ width, height }) => (
+            <List
+              height={height - 50}
+              onRowsRendered={onRowsRendered}
+              ref={registerChild}
+              rowCount={expenses.length}
+              rowHeight={cache.rowHeight}
+              rowRenderer={rowRenderer}
+              width={width}
+              deferredMeasurementCache={cache}
+              overscanRowCount={6}
+            />
+          )}
+        </AutoSizer>
+      )}
+    </InfiniteLoader>
   );
 };
 

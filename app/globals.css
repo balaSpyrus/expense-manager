@@ -11,9 +11,11 @@
 }
 
 html,
+main,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
@@ -35,8 +37,59 @@ a {
   text-decoration: none;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff2d;
+}
+
+.nav h1 {
+  font-size: 1.5rem;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.filter {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  gap: 6px;
+  padding: 1rem;
+  background-color: #ffffff2d;
+  border-radius: 1rem;
+
+  #category {
+    margin-left: 6px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .filter {
+    background-color: rgb(53 53 53);
+    ;
+  }
+  
 }
