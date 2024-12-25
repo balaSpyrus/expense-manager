@@ -1,7 +1,5 @@
-import PieChart from "@/component/chart/pieChart";
-import RightPane from "@/component/rightpane";
+import MainFrame from "@/component/mainFrame";
 import { ExpenseType } from "@/types";
-import { formatCategory, generateColor } from "@/utils";
 import { promises as fs } from "fs";
 import { NextPage } from "next";
 import styles from "./dashboard.module.css";
@@ -28,39 +26,10 @@ const getExpenses = async () => {
 
 const Dashboard: NextPage = async () => {
   const expenses = await getExpenses();
-  const categorywiseInfo = expenses.reduce(
-    (expense, { total_amount, category }) => {
-      if (expense[category]) {
-        expense[category].amount += +total_amount;
-      } else {
-        expense[category] = {
-          amount: +total_amount,
-
-          color: generateColor(),
-          label: formatCategory(category),
-        };
-      }
-      return expense;
-    },
-    {} as Record<string, { amount: number; color: string; label: string }>
-  );
 
   return (
     <div className={styles.container}>
-      <section className={styles["left-pane"]}>
-        <h3 className={styles.title}>Category-wise Expense Distribution</h3>
-        <h1 className={styles["amt-container"]}>
-          Total Expenses :{" "}
-          <span className={styles.amount}>
-            {Object.values(categorywiseInfo)
-              .reduce((acc, { amount }) => acc + +amount, 0)
-              .toFixed(2)}
-            $
-          </span>
-        </h1>
-        <PieChart categorywiseInfo={categorywiseInfo} />
-      </section>
-      <RightPane expenses={expenses} categorywiseInfo={categorywiseInfo} />
+      <MainFrame expenses={expenses} />
     </div>
   );
 };

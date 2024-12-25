@@ -2,7 +2,7 @@ import { ExpenseType } from "@/types";
 import React, { FC } from "react";
 import styles from "./expenseCard.module.css";
 import Image from "next/image";
-import { formatCategory } from "@/utils";
+import { toTitleCase } from "@/utils";
 
 type Props = {
   expense: ExpenseType;
@@ -31,7 +31,7 @@ const ExpenseCard: FC<Props> = ({ expense, categoryInfo }) => {
         <h3 className={styles.category}>{label}</h3>
         <p className={styles.merchant}>Merchant: {merchant}</p>
         <p className={styles.paymentMode}>
-          Payment Mode: {formatCategory(payment_mode)}
+          Payment Mode: {toTitleCase(payment_mode)}
         </p>
         <p className={styles.description}>{description}</p>
       </div>
@@ -43,7 +43,7 @@ const ExpenseCard: FC<Props> = ({ expense, categoryInfo }) => {
       >
         <p>${total_amount.toFixed(2)}</p>
         <p className={styles.date}>{bill_date}</p>
-        <span className={styles.chip}>{formatCategory(account)}</span>
+        <span className={styles.chip}>{toTitleCase(account)}</span>
       </div>
     </div>
   );

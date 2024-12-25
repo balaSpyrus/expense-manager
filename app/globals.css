@@ -65,31 +65,8 @@ a {
   list-style: none;
 }
 
-.filter {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  display: flex;
-  gap: 6px;
-  padding: 1rem;
-  background-color: #ffffff2d;
-  border-radius: 1rem;
-
-  #category {
-    margin-left: 6px;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .filter {
-    background-color: rgb(53 53 53);
-    ;
-  }
-  
 }
