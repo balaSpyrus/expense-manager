@@ -1,19 +1,19 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .description {
-    font-size: 1.25rem;
-    color: #555;
-    margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1rem;
 }

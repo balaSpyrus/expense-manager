@@ -1,4 +1,5 @@
-import { ExpenseType } from "./types";
+import { PALETTE } from "./constant";
+import { AttrInfoType, ExpenseType } from "./types";
 
 export const generateColor = () => {
     const r = Math.floor(Math.random() * 255);
@@ -17,7 +18,7 @@ export const toTitleCase = (category: string) => {
         .join(" ");
 }
 
-export const getAttrwiseInfo = (expenses: ExpenseType[], attr: "category" | "account" | "payment_mode" = 'category') => expenses.reduce(
+export const getAttrwiseInfo = (expenses: ExpenseType[], attr: keyof typeof PALETTE = 'category') => expenses.reduce(
     (expense, { total_amount, ...rest }) => {
         const attrValue = rest[attr];
         if (expense[attrValue]) {
@@ -26,11 +27,11 @@ export const getAttrwiseInfo = (expenses: ExpenseType[], attr: "category" | "acc
             expense[attrValue] = {
                 amount: +total_amount,
 
-                color: generateColor(),
+                color: PALETTE[attr][attrValue as keyof typeof PALETTE[typeof attr]],
                 label: toTitleCase(attrValue),
             };
         }
         return expense;
     },
-    {} as Record<string, { amount: number; color: string; label: string }>
+    {} as Record<string, AttrInfoType>
 )

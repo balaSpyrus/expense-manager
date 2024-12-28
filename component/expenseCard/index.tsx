@@ -1,15 +1,14 @@
 import { ExpenseType } from "@/types";
-import React, { FC } from "react";
-import styles from "./expenseCard.module.css";
-import Image from "next/image";
 import { toTitleCase } from "@/utils";
+import Image from "next/image";
+import { FC } from "react";
+import styles from "./expenseCard.module.css";
 
 type Props = {
   expense: ExpenseType;
-  categoryInfo: { amount: number; color: string; label: string };
 };
 
-const ExpenseCard: FC<Props> = ({ expense, categoryInfo }) => {
+const ExpenseCard: FC<Props> = ({ expense }) => {
   const {
     category,
     total_amount,
@@ -21,29 +20,27 @@ const ExpenseCard: FC<Props> = ({ expense, categoryInfo }) => {
     merchant,
   } = expense;
 
-  const { color, label } = categoryInfo;
   return (
     <div className={styles.card}>
-      <div className={styles.image}>
-        <Image src={image_url} alt={category} fill unoptimized />
-      </div>
+      {image_url && (
+        <div className={styles.image}>
+          <Image src={image_url} alt={category} fill unoptimized />
+        </div>
+      )}
       <div className={styles.details}>
-        <h3 className={styles.category}>{label}</h3>
-        <p className={styles.merchant}>Merchant: {merchant}</p>
-        <p className={styles.paymentMode}>
-          Payment Mode: {toTitleCase(payment_mode)}
-        </p>
+        <h3 className={styles.category}>
+          {toTitleCase(category)}
+          <p className={styles.chip}>Merchant: {merchant}</p>
+          <p className={styles.chip}>
+            Payment Mode: {toTitleCase(payment_mode)}
+          </p>
+        </h3>
         <p className={styles.description}>{description}</p>
       </div>
-      <div
-        className={styles.amount}
-        style={{
-          backgroundColor: color,
-        }}
-      >
+      <div className={styles.amount}>
         <p>${total_amount.toFixed(2)}</p>
         <p className={styles.date}>{bill_date}</p>
-        <span className={styles.chip}>{toTitleCase(account)}</span>
+        <span className={styles.acc_info}>{toTitleCase(account)}</span>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 export interface ExpenseType {
   category: string;
   total_amount: number;
-  image_url: string;
+  image_url?: string | null
   bill_date: string;
   created_by: string;
   payment_mode: string;
@@ -9,3 +9,6 @@ export interface ExpenseType {
   description: string;
   merchant: string;
 }
+
+export type AttrInfoType = { amount: number; color: string; label: string };
+

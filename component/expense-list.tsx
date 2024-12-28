@@ -1,5 +1,5 @@
 import { ExpenseType } from "@/types";
-import { FC, useContext } from "react";
+import { FC } from "react";
 import {
   AutoSizer,
   CellMeasurer,
@@ -11,14 +11,12 @@ import {
 } from "react-virtualized";
 import "react-virtualized/styles.css";
 import ExpenseCard from "./expenseCard";
-import { ExpenseContext } from "./mainFrame";
 
 interface Props {
   expenses: ExpenseType[];
 }
 
 const ExpenseList: FC<Props> = ({ expenses }) => {
-  const { attrwiseInfo } = useContext(ExpenseContext);
   const cache = new CellMeasurerCache({
     fixedWidth: true,
     defaultHeight: 270, // Default height before measuring
@@ -58,10 +56,7 @@ const ExpenseList: FC<Props> = ({ expenses }) => {
       >
         {({ measure, registerChild }) => (
           <div onLoad={measure} key={key} style={style} ref={registerChild}>
-            <ExpenseCard
-              expense={item}
-              categoryInfo={attrwiseInfo["category"][item.category]}
-            />
+            <ExpenseCard expense={item} />
           </div>
         )}
       </CellMeasurer>
@@ -78,7 +73,7 @@ const ExpenseList: FC<Props> = ({ expenses }) => {
         <AutoSizer>
           {({ width, height }) => (
             <List
-              height={height - 50}
+              height={height - 70}
               onRowsRendered={onRowsRendered}
               ref={registerChild}
               rowCount={expenses.length}

@@ -24,7 +24,7 @@
   {
     "category": "entertainment",
     "total_amount": 49.08,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "3/22/2022",
     "created_by": "system",
     "payment_mode": "cash",
@@ -134,7 +134,7 @@
   {
     "category": "dining",
     "total_amount": 15.64,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "2/15/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
@@ -145,7 +145,7 @@
   {
     "category": "travel",
     "total_amount": 49.26,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "10/4/2022",
     "created_by": "system",
     "payment_mode": "upi",
@@ -156,7 +156,7 @@
   {
     "category": "travel",
     "total_amount": 43.45,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "7/13/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
@@ -233,7 +233,7 @@
   {
     "category": "groceries",
     "total_amount": 19.03,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "5/18/2022",
     "created_by": "system",
     "payment_mode": "cash",
@@ -321,7 +321,7 @@
   {
     "category": "transportation",
     "total_amount": 56.56,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "5/13/2022",
     "created_by": "system",
     "payment_mode": "upi",
@@ -332,7 +332,7 @@
   {
     "category": "health_care",
     "total_amount": 9.11,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "6/26/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
@@ -343,7 +343,7 @@
   {
     "category": "dining",
     "total_amount": 81.76,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "10/2/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
@@ -354,7 +354,7 @@
   {
     "category": "shopping",
     "total_amount": 58.51,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "11/18/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
@@ -365,7 +365,7 @@
   {
     "category": "rent",
     "total_amount": 70.81,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "10/8/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
@@ -376,7 +376,7 @@
   {
     "category": "health_care",
     "total_amount": 40.12,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "9/4/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
@@ -387,7 +387,7 @@
   {
     "category": "entertainment",
     "total_amount": 63.25,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "2/18/2022",
     "created_by": "system",
     "payment_mode": "upi",
@@ -398,7 +398,7 @@
   {
     "category": "entertainment",
     "total_amount": 93.05,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "12/16/2022",
     "created_by": "system",
     "payment_mode": "upi",
@@ -486,7 +486,7 @@
   {
     "category": "others",
     "total_amount": 12.11,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "7/26/2022",
     "created_by": "system",
     "payment_mode": "upi",
@@ -497,7 +497,7 @@
   {
     "category": "shopping",
     "total_amount": 0.02,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "4/26/2022",
     "created_by": "system",
     "payment_mode": "cash",
@@ -508,7 +508,7 @@
   {
     "category": "rent",
     "total_amount": 49.46,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "1/29/2022",
     "created_by": "system",
     "payment_mode": "upi",
@@ -519,7 +519,7 @@
   {
     "category": "utilities",
     "total_amount": 36.84,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "7/25/2022",
     "created_by": "system",
     "payment_mode": "credit_card",

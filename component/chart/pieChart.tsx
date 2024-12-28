@@ -1,31 +1,29 @@
+import { ExpenseType } from "@/types";
+import { getAttrwiseInfo } from "@/utils";
 import { ChartData, PieController } from "chart.js";
 import Chart from "chart.js/auto";
-import {
-  ChangeEventHandler,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { ChangeEventHandler, useMemo, useState } from "react";
 import { Pie } from "react-chartjs-2";
-import { ExpenseContext } from "../mainFrame";
 
 Chart.register(PieController);
 
-const PieChart = () => {
-  const { attrwiseInfo } = useContext(ExpenseContext);
-  const [pieInfo, setPieInfo] = useState(attrwiseInfo["payment_mode"]);
+const PieChart = ({ expenses }: { expenses: ExpenseType[] }) => {
+  const [selected, setSelected] = useState<
+    "category" | "payment_mode" | "account"
+  >("category");
 
   const data: ChartData<"pie", number[], unknown> = useMemo(() => {
     const labels: string[] = [];
     const colors: string[] = [];
     const data: number[] = [];
 
-    Object.values(pieInfo || {}).forEach(({ amount, color, label }) => {
-      labels.push(label);
-      colors.push(color);
-      data.push(amount);
-    });
+    Object.values(getAttrwiseInfo(expenses, selected)).forEach(
+      ({ amount, color, label }) => {
+        labels.push(label);
+        colors.push(color);
+        data.push(amount);
+      }
+    );
 
     return {
       labels,
@@ -39,26 +37,21 @@ const PieChart = () => {
         },
       ],
     };
-  }, [pieInfo]);
+  }, [expenses, selected]);
 
   const onChange: ChangeEventHandler<HTMLSelectElement> = (e) => {
-    setPieInfo(attrwiseInfo[e.target.value]);
+    setSelected(e.target.value as typeof selected);
   };
-
-  useEffect(() => {
-    if (!pieInfo) {
-      setPieInfo(attrwiseInfo["category"]);
-    }
-  }, [attrwiseInfo]);
 
   return (
     <>
-      <select onChange={onChange} defaultValue={"payment_mode"}>
+      <select onChange={onChange} defaultValue={"category"} value={selected}>
         <option value={"category"}>Category</option>
         <option value={"payment_mode"}>Payment Mode</option>
         <option value={"account"}>Account</option>
       </select>
       <Pie
+        id="pie-chart"
         data={data}
         options={{
           plugins: {

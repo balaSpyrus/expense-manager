@@ -1,82 +1,96 @@
 .card {
-    display: flex;
-    flex-direction: row;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 12px 0;
-    width: 100%;
-  }
-  
-  .image {
-    position: relative;
-    align-self: stretch;
-    width: 130px;
-    height: 130px;
-  }
-  
-  .details {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex: 1;
-    max-height: 130px;
-  }
-  
-  .category {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-    color: #333;
-  }
-  
-  .merchant, .date, .paymentMode, .amount, .description, .createdBy {
-    font-size: 0.9rem;
-    color: #555;
-  }
+  display: flex;
+  flex-direction: row;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 12px 0;
+  width: 100%;
+}
 
-  .chip {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #00000064;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 0 8px 0 8px;
-  }
-  
-  .amount {
-    min-width: 150px;
-    position: relative;
-    font-weight: bold;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    align-items: center;
-    justify-content: center;
-  }
+.image {
+  position: relative;
+  align-self: stretch;
+  width: 130px;
+  height: 130px;
+}
 
-  .amount p:first-child {
-    font-size: 36px;
-    color: #00000062;
-  }
+.details {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  max-height: 130px;
+}
 
-  .amount p {
-    font-size: 20px;
-    color: #ffffff;
-  }
-  
-  .description {
-    font-style: italic;
-    color: #777;
-  }
-  
-  .createdBy {
-    text-align: right;
-    font-size: 0.8rem;
-    color: #999;
-  }
-  
+.category {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.date,
+.amount,
+.description,
+.createdBy {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.acc_info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #00000064;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0 8px 0 8px;
+}
+
+.amount {
+  min-width: 150px;
+  position: relative;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53 53 53);
+}
+
+.amount p:first-child {
+  font-size: 36px;
+  color: skyblue;
+}
+
+.amount p {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.description {
+  font-style: italic;
+  color: #777;
+}
+
+.createdBy {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.chip {
+  background-color: #a8a8a8;
+  color: #333;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  align-self: center;
+}

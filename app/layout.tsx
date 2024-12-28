@@ -40,7 +40,7 @@ export default function RootLayout({
             </li>
           </ul>
         </nav>
-        <main>{children}</main>
+        <main style={{ height: "calc(100% - 60px" }}>{children}</main>
       </body>
     </html>
   );
