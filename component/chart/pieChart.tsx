@@ -33,7 +33,7 @@ const PieChart = ({ expenses }: { expenses: ExpenseType[] }) => {
           backgroundColor: colors,
           borderColor: "black",
           data,
-          hoverOffset: 10,
+          hoverOffset: 50,
         },
       ],
     };
@@ -45,7 +45,7 @@ const PieChart = ({ expenses }: { expenses: ExpenseType[] }) => {
 
   return (
     <>
-      <select onChange={onChange} defaultValue={"category"} value={selected}>
+      <select onChange={onChange} value={selected}>
         <option value={"category"}>Category</option>
         <option value={"payment_mode"}>Payment Mode</option>
         <option value={"account"}>Account</option>
@@ -54,9 +54,13 @@ const PieChart = ({ expenses }: { expenses: ExpenseType[] }) => {
         id="pie-chart"
         data={data}
         options={{
+          layout: {
+            padding: 30,
+          },
           plugins: {
             legend: {
               fullSize: true,
+              position: "bottom",
               labels: {
                 color: "white",
                 font: {

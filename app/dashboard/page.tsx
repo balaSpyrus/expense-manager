@@ -15,13 +15,17 @@ const getDummyData = async () => {
 };
 
 const getExpenses = async () => {
+  let expenses: ExpenseType[] = [];
   try {
     const res = await fetch("http://localhost:3000/api/expenses");
-    const expenses = (await res.json()) as ExpenseType[];
-    return expenses;
+    expenses = await res.json();
   } catch {
-    return getDummyData();
+    expenses = await getDummyData();
   }
+
+  return expenses.sort((a, b) => {
+    return new Date(b.bill_date).getTime() - new Date(a.bill_date).getTime();
+  });
 };
 
 const Dashboard: NextPage = async () => {
