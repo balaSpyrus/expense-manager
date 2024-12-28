@@ -1630,7 +1630,7 @@
   {
     "category": "shopping",
     "total_amount": 5.68,
-    "image_url": "https://placehold.co/400x400",
+    "image_url": null,
     "bill_date": "12/30/2022",
     "created_by": "system",
     "payment_mode": "upi",

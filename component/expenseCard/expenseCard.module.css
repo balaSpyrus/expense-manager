@@ -94,3 +94,38 @@
   font-size: 0.8rem;
   align-self: center;
 }
+
+@media screen and (max-width: 600px) {
+  .card {
+    flex-direction: column-reverse;
+  }
+
+  .image {
+    width: 100%;
+    height: 150px;
+  }
+
+  .details {
+    padding: 1rem;
+    max-height: 100%;
+    flex-direction: row;
+  }
+
+  .chip {
+    align-self: flex-start;
+  }
+
+  .category {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .description {
+    flex: 1;
+  }
+
+  .amount {
+    min-width: 100%;
+  }
+}
