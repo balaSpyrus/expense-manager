@@ -1,6 +1,6 @@
 import ExpenseList from "@/component/expense-list";
 import { Filter } from "@/component/filter";
-import { ExpenseObjType } from "@/types";
+import { ExpenseObjType, FilterAttrType } from "@/types";
 import React from "react";
 import styles from "./rightpane.module.css";
 
@@ -9,7 +9,7 @@ const RightPane = ({
   onFilterChange,
 }: {
   expenses: ExpenseObjType[];
-  onFilterChange: (attr: keyof ExpenseObjType, value: string) => void;
+  onFilterChange: (attr: FilterAttrType, value: string) => void;
 }) => {
   return (
     <section className={styles.right_pane}>

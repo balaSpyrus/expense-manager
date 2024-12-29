@@ -14,5 +14,7 @@ export interface ExpenseObjType {
   id: string;
 }
 
+export type FilterAttrType = 'category' | 'payment_mode' | 'account';
+
 export type AttrInfoType = { amount: number; color: string; label: string };
 

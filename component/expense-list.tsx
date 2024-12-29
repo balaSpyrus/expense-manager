@@ -1,5 +1,5 @@
 import { ExpenseObjType } from "@/types";
-import { FC } from "react";
+import { FC, useState } from "react";
 import {
   AutoSizer,
   CellMeasurer,
@@ -11,12 +11,15 @@ import {
 } from "react-virtualized";
 import "react-virtualized/styles.css";
 import ExpenseCard from "./expenseCard";
+import { fetchExpenses } from "@/lib";
 
 interface Props {
   expenses: ExpenseObjType[];
 }
 
-const ExpenseList: FC<Props> = ({ expenses }) => {
+const ExpenseList: FC<Props> = ({ expenses: expenseProps }) => {
+  const [expenses, setExpenses] = useState<ExpenseObjType[]>([]);
+  const [rowCount] = useState(500);
   const cache = new CellMeasurerCache({
     fixedWidth: true,
     defaultHeight: 270, // Default height before measuring
@@ -32,19 +35,25 @@ const ExpenseList: FC<Props> = ({ expenses }) => {
       }, 1000);
     });
 
-    return expenses.slice(startIndex, stopIndex);
+    let newExpenses = [];
+
+    if (startIndex < expenseProps.length) {
+      newExpenses = expenseProps.slice(startIndex, stopIndex);
+    } else {
+      newExpenses = await fetchExpenses(startIndex, stopIndex);
+    }
+
+    setExpenses((prev) => {
+      const updatedExpenses = [...prev];
+      newExpenses.forEach((expense, idx) => {
+        updatedExpenses[startIndex + idx] = expense;
+      });
+      return updatedExpenses;
+    });
   };
 
   const rowRenderer: ListRowRenderer = ({ key, index, style, parent }) => {
     const item = expenses[index];
-
-    if (!item) {
-      return (
-        <div key={key} style={style}>
-          Loading...
-        </div>
-      );
-    }
 
     return (
       <CellMeasurer
@@ -54,9 +63,14 @@ const ExpenseList: FC<Props> = ({ expenses }) => {
         columnIndex={0}
         rowIndex={index}
       >
-        {({ measure, registerChild }) => (
-          <div onLoad={measure} key={key} style={style} ref={registerChild}>
-            <ExpenseCard expense={item} />
+        {({ registerChild }) => (
+          <div
+            key={key}
+            style={style}
+            ref={registerChild}
+            className={!item ? "loading-items" : ""}
+          >
+            {item ? <ExpenseCard expense={item} /> : <span />}
           </div>
         )}
       </CellMeasurer>
@@ -67,7 +81,7 @@ const ExpenseList: FC<Props> = ({ expenses }) => {
     <InfiniteLoader
       isRowLoaded={isRowLoaded}
       loadMoreRows={loadMoreRows}
-      rowCount={expenses.length}
+      rowCount={rowCount}
     >
       {({ onRowsRendered, registerChild }) => (
         <AutoSizer>
@@ -76,7 +90,7 @@ const ExpenseList: FC<Props> = ({ expenses }) => {
               height={height - 70}
               onRowsRendered={onRowsRendered}
               ref={registerChild}
-              rowCount={expenses.length}
+              rowCount={rowCount}
               rowHeight={cache.rowHeight}
               rowRenderer={rowRenderer}
               width={width}

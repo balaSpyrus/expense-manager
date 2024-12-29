@@ -1,5 +1,5 @@
 import { CATEGORIES, PAYMENT_MODES } from "@/constant";
-import { ExpenseObjType } from "@/types";
+import { FilterAttrType } from "@/types";
 import { toTitleCase } from "@/utils";
 import styles from "./filter.module.css";
 
@@ -17,17 +17,17 @@ const filterConfig = [
 export const Filter = ({
   onCategoryChange,
 }: {
-  onCategoryChange: (attr: keyof ExpenseObjType, value: string) => void;
+  onCategoryChange: (attr: FilterAttrType, value: string) => void;
 }) => {
   return (
     <div className={styles.filter}>
-      {filterConfig.map(({ type, options }, i) => (
-        <label key={i} htmlFor={type}>
+      {filterConfig.map(({ type, options }) => (
+        <label key={type} htmlFor={type}>
           Filter by {toTitleCase(type)} :
           <select
             id={type}
             onChange={(e) =>
-              onCategoryChange(type as keyof ExpenseObjType, e.target.value)
+              onCategoryChange(type as FilterAttrType, e.target.value)
             }
           >
             <option value="">All</option>

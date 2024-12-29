@@ -65,12 +65,61 @@ a {
   list-style: none;
 }
 
+.loading-items {
+  min-height: 100px;
+  padding: 0.5rem;
+  width: 100%;
+  animation: loadingAnimation 1.5s infinite;
+}
+
+.loading-items > span {
+  background-color: #ffffff2d;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 #pie-chart {
   background-color: #ffffff0f;
   border-radius: 25px;
 }
+
+#pie-chart.loading {
+  height: 100%;
+  display: block;
+  width: 100%;
+  animation: loadingAnimation 0.5s infinite;
+}
+
+select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffffff2d;
+  color: var(--foreground);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+option {
+  background-color: black;
+  color: var(--foreground);
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
