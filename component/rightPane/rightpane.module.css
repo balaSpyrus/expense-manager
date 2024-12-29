@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .right-pane {
+  .right_pane {
     min-height: 700px;
   }
 }
