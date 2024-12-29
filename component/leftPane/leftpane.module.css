@@ -47,4 +47,13 @@
     flex-basis: 20%;
     width: 100%;
   }
+
+  .amt_container {
+    flex-direction: column;
+  }
+
+  .amt_container h2,
+  .amt_container .amount {
+    font-size: 18px;
+  }
 }
