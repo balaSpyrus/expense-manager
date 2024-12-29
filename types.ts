@@ -1,4 +1,6 @@
-export interface ExpenseType {
+export type ExpType = 'expense' | 'income';
+
+export interface ExpenseObjType {
   category: string;
   total_amount: number;
   image_url?: string | null
@@ -8,6 +10,8 @@ export interface ExpenseType {
   account: string;
   description: string;
   merchant: string;
+  type: ExpType;
+  id: string;
 }
 
 export type AttrInfoType = { amount: number; color: string; label: string };

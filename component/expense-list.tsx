@@ -1,4 +1,4 @@
-import { ExpenseType } from "@/types";
+import { ExpenseObjType } from "@/types";
 import { FC } from "react";
 import {
   AutoSizer,
@@ -13,7 +13,7 @@ import "react-virtualized/styles.css";
 import ExpenseCard from "./expenseCard";
 
 interface Props {
-  expenses: ExpenseType[];
+  expenses: ExpenseObjType[];
 }
 
 const ExpenseList: FC<Props> = ({ expenses }) => {

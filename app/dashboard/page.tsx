@@ -1,7 +1,6 @@
-import MainFrame from "@/component/mainFrame";
-import { ExpenseType } from "@/types";
+import MainLayout from "@/component/mainLayout";
+import { ExpenseObjType } from "@/types";
 import { promises as fs } from "fs";
-import { NextPage } from "next";
 import styles from "./dashboard.module.css";
 
 const getDummyData = async () => {
@@ -11,11 +10,11 @@ const getDummyData = async () => {
   );
   const data = JSON.parse(file);
 
-  return data as ExpenseType[];
+  return data as ExpenseObjType[];
 };
 
 const getExpenses = async () => {
-  let expenses: ExpenseType[] = [];
+  let expenses: ExpenseObjType[] = [];
   try {
     const res = await fetch("http://localhost:3000/api/expenses");
     expenses = await res.json();
@@ -28,14 +27,15 @@ const getExpenses = async () => {
   });
 };
 
-const Dashboard: NextPage = async () => {
+const Page = async () => {
   const expenses = await getExpenses();
+  console.log(expenses);
 
   return (
     <div className={styles.container}>
-      <MainFrame expenses={expenses} />
+      <MainLayout expenses={expenses} />
     </div>
   );
 };
 
-export default Dashboard;
+export default Page;

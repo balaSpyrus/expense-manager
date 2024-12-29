@@ -1,0 +1,14 @@
+.right_pane {
+  display: flex;
+  height: 100%;
+  gap: 16px;
+  flex: 1;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .right-pane {
+    min-height: 700px;
+  }
+}

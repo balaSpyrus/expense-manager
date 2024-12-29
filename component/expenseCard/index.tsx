@@ -1,11 +1,11 @@
-import { ExpenseType } from "@/types";
+import { ExpenseObjType } from "@/types";
 import { toTitleCase } from "@/utils";
 import Image from "next/image";
 import { FC } from "react";
 import styles from "./expenseCard.module.css";
 
 type Props = {
-  expense: ExpenseType;
+  expense: ExpenseObjType;
 };
 
 const ExpenseCard: FC<Props> = ({ expense }) => {

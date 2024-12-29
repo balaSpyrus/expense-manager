@@ -1,4 +1,5 @@
-import { ExpenseType } from "@/types";
+"use client";
+import { ExpenseObjType } from "@/types";
 import { getAttrwiseInfo } from "@/utils";
 import { ChartData, PieController } from "chart.js";
 import Chart from "chart.js/auto";
@@ -7,7 +8,7 @@ import { Pie } from "react-chartjs-2";
 
 Chart.register(PieController);
 
-const PieChart = ({ expenses }: { expenses: ExpenseType[] }) => {
+const PieChart = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   const [selected, setSelected] = useState<
     "category" | "payment_mode" | "account"
   >("category");

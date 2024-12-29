@@ -6,6 +6,7 @@
     "bill_date": "4/27/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "lacinia sapien quis libero nullam sit amet turpis elementum ligula",
     "merchant": "Thoughtworks"
@@ -16,7 +17,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "7/9/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris",
     "merchant": "Npath"
@@ -27,7 +29,8 @@
     "image_url": null,
     "bill_date": "3/22/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra",
     "merchant": "Livefish"
@@ -39,6 +42,7 @@
     "bill_date": "1/2/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem",
     "merchant": "Zazio"
@@ -49,7 +53,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "12/28/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "merchant": "Lajo"
@@ -60,7 +65,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "1/11/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut",
     "merchant": "Snaptags"
@@ -72,6 +78,7 @@
     "bill_date": "2/9/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet",
     "merchant": "Bubblebox"
@@ -83,6 +90,7 @@
     "bill_date": "1/31/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "savings",
     "description": "ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis",
     "merchant": "Kwilith"
@@ -94,6 +102,7 @@
     "bill_date": "3/28/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "current",
     "description": "lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum",
     "merchant": "Oloo"
@@ -105,6 +114,7 @@
     "bill_date": "6/9/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "savings",
     "description": "nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan",
     "merchant": "Babbleopia"
@@ -115,7 +125,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "8/7/2022",
     "created_by": "system",
-    "payment_mode": "bank_transfer",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum",
     "merchant": "Meetz"
@@ -127,6 +138,7 @@
     "bill_date": "9/23/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "savings",
     "description": "a suscipit nulla elit ac nulla sed vel enim sit amet",
     "merchant": "Jetwire"
@@ -138,6 +150,7 @@
     "bill_date": "2/15/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "savings",
     "description": "justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas",
     "merchant": "Skyndu"
@@ -149,6 +162,7 @@
     "bill_date": "10/4/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non",
     "merchant": "Dynazzy"
@@ -159,7 +173,8 @@
     "image_url": null,
     "bill_date": "7/13/2022",
     "created_by": "system",
-    "payment_mode": "debit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor",
     "merchant": "Yakidoo"
@@ -170,7 +185,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "8/5/2022",
     "created_by": "system",
-    "payment_mode": "bank_transfer",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat",
     "merchant": "Skippad"
@@ -182,6 +198,7 @@
     "bill_date": "11/9/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "income",
     "account": "wallet",
     "description": "lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id",
     "merchant": "Plambee"
@@ -193,6 +210,7 @@
     "bill_date": "3/22/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in",
     "merchant": "Topicshots"
@@ -204,6 +222,7 @@
     "bill_date": "8/25/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
     "merchant": "Pixonyx"
@@ -215,6 +234,7 @@
     "bill_date": "5/21/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse",
     "merchant": "Ainyx"
@@ -226,6 +246,7 @@
     "bill_date": "4/5/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "vel enim sit amet nunc viverra dapibus nulla suscipit ligula in",
     "merchant": "Tambee"
@@ -237,6 +258,7 @@
     "bill_date": "5/18/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "savings",
     "description": "amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis",
     "merchant": "Dablist"
@@ -248,6 +270,7 @@
     "bill_date": "12/13/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "income",
     "account": "wallet",
     "description": "justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est",
     "merchant": "Babblestorm"
@@ -259,6 +282,7 @@
     "bill_date": "6/5/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat",
     "merchant": "Demizz"
@@ -270,6 +294,7 @@
     "bill_date": "6/23/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "credit",
     "description": "nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non",
     "merchant": "Kamba"
@@ -281,6 +306,7 @@
     "bill_date": "10/2/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue",
     "merchant": "Ntag"
@@ -292,6 +318,7 @@
     "bill_date": "3/2/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer",
     "merchant": "Quatz"
@@ -303,6 +330,7 @@
     "bill_date": "8/29/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "savings",
     "description": "nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis",
     "merchant": "Thoughtmix"
@@ -313,7 +341,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "11/24/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in",
     "merchant": "Twitterbridge"
@@ -325,6 +354,7 @@
     "bill_date": "5/13/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "metus aenean fermentum donec ut mauris eget massa tempor convallis nulla",
     "merchant": "Tagtune"
@@ -336,6 +366,7 @@
     "bill_date": "6/26/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt",
     "merchant": "Leexo"
@@ -346,7 +377,8 @@
     "image_url": null,
     "bill_date": "10/2/2022",
     "created_by": "system",
-    "payment_mode": "credit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien",
     "merchant": "Gabspot"
@@ -357,7 +389,8 @@
     "image_url": null,
     "bill_date": "11/18/2022",
     "created_by": "system",
-    "payment_mode": "debit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "ac diam cras pellentesque volutpat dui maecenas tristique est et",
     "merchant": "Skyndu"
@@ -369,6 +402,7 @@
     "bill_date": "10/8/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "savings",
     "description": "hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
     "merchant": "Realcube"
@@ -379,7 +413,8 @@
     "image_url": null,
     "bill_date": "9/4/2022",
     "created_by": "system",
-    "payment_mode": "credit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros",
     "merchant": "Demizz"
@@ -390,7 +425,8 @@
     "image_url": null,
     "bill_date": "2/18/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc",
     "merchant": "Tekfly"
@@ -402,6 +438,7 @@
     "bill_date": "12/16/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis",
     "merchant": "Browsetype"
@@ -413,6 +450,7 @@
     "bill_date": "8/4/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "savings",
     "description": "congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien",
     "merchant": "Kare"
@@ -423,7 +461,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "10/13/2022",
     "created_by": "system",
-    "payment_mode": "bank_transfer",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam",
     "merchant": "Nlounge"
@@ -435,6 +474,7 @@
     "bill_date": "6/2/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "savings",
     "description": "eros vestibulum ac est lacinia nisi venenatis tristique fusce congue",
     "merchant": "Yabox"
@@ -445,7 +485,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "12/10/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis",
     "merchant": "Roomm"
@@ -456,7 +497,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "12/13/2022",
     "created_by": "system",
-    "payment_mode": "credit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit",
     "merchant": "Centidel"
@@ -468,6 +510,7 @@
     "bill_date": "12/7/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "savings",
     "description": "integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue",
     "merchant": "Lazzy"
@@ -479,6 +522,7 @@
     "bill_date": "10/11/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae",
     "merchant": "Edgewire"
@@ -490,6 +534,7 @@
     "bill_date": "7/26/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "savings",
     "description": "dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius",
     "merchant": "Gabspot"
@@ -500,7 +545,8 @@
     "image_url": null,
     "bill_date": "4/26/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac",
     "merchant": "Livepath"
@@ -512,6 +558,7 @@
     "bill_date": "1/29/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "aliquam erat volutpat in congue etiam justo etiam pretium iaculis",
     "merchant": "DabZ"
@@ -523,6 +570,7 @@
     "bill_date": "7/25/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at",
     "merchant": "Feedbug"
@@ -534,6 +582,7 @@
     "bill_date": "7/24/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at",
     "merchant": "Vinte"
@@ -544,7 +593,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "12/25/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
     "merchant": "Feedbug"
@@ -556,6 +606,7 @@
     "bill_date": "8/26/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "credit",
     "description": "proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis",
     "merchant": "Quinu"
@@ -567,6 +618,7 @@
     "bill_date": "1/24/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "savings",
     "description": "dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non",
     "merchant": "Skidoo"
@@ -578,6 +630,7 @@
     "bill_date": "9/9/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget",
     "merchant": "Skalith"
@@ -589,6 +642,7 @@
     "bill_date": "10/23/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "savings",
     "description": "et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec",
     "merchant": "Photobug"
@@ -600,6 +654,7 @@
     "bill_date": "8/11/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "savings",
     "description": "hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut",
     "merchant": "Skimia"
@@ -611,6 +666,7 @@
     "bill_date": "10/19/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "savings",
     "description": "tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu",
     "merchant": "Thoughtbeat"
@@ -622,6 +678,7 @@
     "bill_date": "5/8/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "savings",
     "description": "enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue",
     "merchant": "BlogXS"
@@ -633,6 +690,7 @@
     "bill_date": "5/3/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis",
     "merchant": "Zoozzy"
@@ -644,6 +702,7 @@
     "bill_date": "12/13/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt",
     "merchant": "Chatterpoint"
@@ -655,6 +714,7 @@
     "bill_date": "2/26/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "current",
     "description": "justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim",
     "merchant": "LiveZ"
@@ -666,6 +726,7 @@
     "bill_date": "5/16/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in",
     "merchant": "Linkbuzz"
@@ -677,6 +738,7 @@
     "bill_date": "8/7/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "savings",
     "description": "a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit",
     "merchant": "Twinder"
@@ -687,7 +749,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "4/1/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam",
     "merchant": "Lazzy"
@@ -699,6 +762,7 @@
     "bill_date": "6/26/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam",
     "merchant": "Voonder"
@@ -710,6 +774,7 @@
     "bill_date": "2/25/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "income",
     "account": "savings",
     "description": "quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo",
     "merchant": "Yakitri"
@@ -721,6 +786,7 @@
     "bill_date": "7/18/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum",
     "merchant": "Livepath"
@@ -731,7 +797,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "4/10/2022",
     "created_by": "system",
-    "payment_mode": "credit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec",
     "merchant": "LiveZ"
@@ -743,6 +810,7 @@
     "bill_date": "8/10/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem",
     "merchant": "Linkbridge"
@@ -754,6 +822,7 @@
     "bill_date": "4/13/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "justo nec condimentum neque sapien placerat ante nulla justo aliquam",
     "merchant": "Fivechat"
@@ -764,7 +833,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "2/18/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in",
     "merchant": "Shufflebeat"
@@ -776,6 +846,7 @@
     "bill_date": "12/21/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "current",
     "description": "auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum",
     "merchant": "Oodoo"
@@ -787,6 +858,7 @@
     "bill_date": "5/23/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "savings",
     "description": "ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet",
     "merchant": "Vipe"
@@ -798,6 +870,7 @@
     "bill_date": "1/13/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam",
     "merchant": "BlogXS"
@@ -809,6 +882,7 @@
     "bill_date": "7/2/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue",
     "merchant": "Kwideo"
@@ -820,6 +894,7 @@
     "bill_date": "2/9/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget",
     "merchant": "Youfeed"
@@ -831,6 +906,7 @@
     "bill_date": "8/20/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo",
     "merchant": "Tazzy"
@@ -841,7 +917,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "1/3/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc",
     "merchant": "Jamia"
@@ -853,6 +930,7 @@
     "bill_date": "6/11/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa",
     "merchant": "Feedbug"
@@ -864,6 +942,7 @@
     "bill_date": "5/18/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "savings",
     "description": "id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at",
     "merchant": "Gigaclub"
@@ -874,7 +953,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "1/6/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum",
     "merchant": "Flipstorm"
@@ -886,6 +966,7 @@
     "bill_date": "11/7/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "credit",
     "description": "molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus",
     "merchant": "Linktype"
@@ -897,6 +978,7 @@
     "bill_date": "11/3/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc",
     "merchant": "Buzzshare"
@@ -908,6 +990,7 @@
     "bill_date": "9/11/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "savings",
     "description": "rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet",
     "merchant": "Meevee"
@@ -918,7 +1001,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "10/23/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros",
     "merchant": "Realpoint"
@@ -930,6 +1014,7 @@
     "bill_date": "4/15/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "current",
     "description": "suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris",
     "merchant": "Skiptube"
@@ -941,6 +1026,7 @@
     "bill_date": "11/28/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "savings",
     "description": "iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc",
     "merchant": "Bluezoom"
@@ -952,6 +1038,7 @@
     "bill_date": "4/14/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio",
     "merchant": "Zoombeat"
@@ -963,6 +1050,7 @@
     "bill_date": "8/10/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus",
     "merchant": "Quinu"
@@ -974,6 +1062,7 @@
     "bill_date": "8/2/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "credit",
     "description": "parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent",
     "merchant": "Demivee"
@@ -985,6 +1074,7 @@
     "bill_date": "6/19/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac",
     "merchant": "Livetube"
@@ -995,7 +1085,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "12/2/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla",
     "merchant": "Youopia"
@@ -1007,6 +1098,7 @@
     "bill_date": "7/2/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum",
     "merchant": "Mynte"
@@ -1018,6 +1110,7 @@
     "bill_date": "6/9/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur",
     "merchant": "Abata"
@@ -1028,7 +1121,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "5/14/2022",
     "created_by": "system",
-    "payment_mode": "debit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor",
     "merchant": "Jatri"
@@ -1040,6 +1134,7 @@
     "bill_date": "4/20/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer",
     "merchant": "Avaveo"
@@ -1051,6 +1146,7 @@
     "bill_date": "11/27/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis",
     "merchant": "Photobean"
@@ -1062,6 +1158,7 @@
     "bill_date": "1/14/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris",
     "merchant": "Thoughtworks"
@@ -1073,6 +1170,7 @@
     "bill_date": "1/16/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer",
     "merchant": "Skyble"
@@ -1084,6 +1182,7 @@
     "bill_date": "4/25/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "current",
     "description": "platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie",
     "merchant": "Tagpad"
@@ -1095,6 +1194,7 @@
     "bill_date": "10/27/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit",
     "merchant": "Wordtune"
@@ -1106,6 +1206,7 @@
     "bill_date": "1/21/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est",
     "merchant": "Trudeo"
@@ -1117,6 +1218,7 @@
     "bill_date": "2/26/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum",
     "merchant": "Jetpulse"
@@ -1128,6 +1230,7 @@
     "bill_date": "1/24/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at",
     "merchant": "Devpulse"
@@ -1139,6 +1242,7 @@
     "bill_date": "3/16/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "savings",
     "description": "tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in",
     "merchant": "Zoozzy"
@@ -1150,6 +1254,7 @@
     "bill_date": "11/28/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "credit",
     "description": "odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit",
     "merchant": "Rhybox"
@@ -1161,6 +1266,7 @@
     "bill_date": "9/26/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut",
     "merchant": "Meeveo"
@@ -1172,6 +1278,7 @@
     "bill_date": "7/8/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper",
     "merchant": "Layo"
@@ -1183,6 +1290,7 @@
     "bill_date": "6/27/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "current",
     "description": "ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor",
     "merchant": "Twitterwire"
@@ -1194,6 +1302,7 @@
     "bill_date": "10/31/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel",
     "merchant": "Voonte"
@@ -1205,6 +1314,7 @@
     "bill_date": "5/13/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "income",
     "account": "current",
     "description": "lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti",
     "merchant": "Centidel"
@@ -1216,6 +1326,7 @@
     "bill_date": "4/3/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "savings",
     "description": "adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit",
     "merchant": "Roodel"
@@ -1227,6 +1338,7 @@
     "bill_date": "12/22/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in",
     "merchant": "Mita"
@@ -1238,6 +1350,7 @@
     "bill_date": "3/8/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "lorem id ligula suspendisse ornare consequat lectus in est risus",
     "merchant": "Midel"
@@ -1249,6 +1362,7 @@
     "bill_date": "4/23/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "current",
     "description": "pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla",
     "merchant": "Roodel"
@@ -1260,6 +1374,7 @@
     "bill_date": "6/5/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus",
     "merchant": "Oba"
@@ -1270,7 +1385,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "1/15/2022",
     "created_by": "system",
-    "payment_mode": "debit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in",
     "merchant": "Browsecat"
@@ -1281,7 +1397,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "2/16/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit",
     "merchant": "Riffpedia"
@@ -1293,6 +1410,7 @@
     "bill_date": "4/12/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet",
     "merchant": "Browsecat"
@@ -1304,6 +1422,7 @@
     "bill_date": "11/8/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "dapibus nulla suscipit ligula in lacus curabitur at ipsum ac",
     "merchant": "Devpoint"
@@ -1315,6 +1434,7 @@
     "bill_date": "5/20/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "eu felis fusce posuere felis sed lacus morbi sem mauris laoreet",
     "merchant": "Dynabox"
@@ -1326,6 +1446,7 @@
     "bill_date": "8/2/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec",
     "merchant": "Buzzster"
@@ -1337,6 +1458,7 @@
     "bill_date": "4/23/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus",
     "merchant": "Kare"
@@ -1348,6 +1470,7 @@
     "bill_date": "8/15/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et",
     "merchant": "Pixope"
@@ -1358,7 +1481,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "12/7/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in",
     "merchant": "Plajo"
@@ -1370,6 +1494,7 @@
     "bill_date": "2/7/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id",
     "merchant": "Tagpad"
@@ -1381,6 +1506,7 @@
     "bill_date": "11/8/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus",
     "merchant": "Devify"
@@ -1391,7 +1517,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "4/29/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget",
     "merchant": "Tavu"
@@ -1403,6 +1530,7 @@
     "bill_date": "7/21/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "current",
     "description": "at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis",
     "merchant": "Gigabox"
@@ -1414,6 +1542,7 @@
     "bill_date": "11/9/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "savings",
     "description": "pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar",
     "merchant": "Pixonyx"
@@ -1424,7 +1553,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "6/20/2022",
     "created_by": "system",
-    "payment_mode": "credit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in",
     "merchant": "Quimm"
@@ -1436,6 +1566,7 @@
     "bill_date": "1/6/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar",
     "merchant": "Layo"
@@ -1447,6 +1578,7 @@
     "bill_date": "1/1/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac",
     "merchant": "Kwilith"
@@ -1457,7 +1589,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "10/22/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec",
     "merchant": "Mynte"
@@ -1469,6 +1602,7 @@
     "bill_date": "2/5/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae",
     "merchant": "Devbug"
@@ -1480,6 +1614,7 @@
     "bill_date": "8/15/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat",
     "merchant": "Linktype"
@@ -1490,7 +1625,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "11/8/2022",
     "created_by": "system",
-    "payment_mode": "debit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat",
     "merchant": "Photobean"
@@ -1502,6 +1638,7 @@
     "bill_date": "8/15/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "current",
     "description": "aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus",
     "merchant": "Browsebug"
@@ -1513,6 +1650,7 @@
     "bill_date": "5/20/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
     "merchant": "Topdrive"
@@ -1524,6 +1662,7 @@
     "bill_date": "1/20/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi",
     "merchant": "Browsetype"
@@ -1535,6 +1674,7 @@
     "bill_date": "10/11/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac",
     "merchant": "Thoughtblab"
@@ -1546,6 +1686,7 @@
     "bill_date": "3/8/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "savings",
     "description": "erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam",
     "merchant": "Youopia"
@@ -1557,6 +1698,7 @@
     "bill_date": "1/2/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "savings",
     "description": "duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in",
     "merchant": "Quinu"
@@ -1568,6 +1710,7 @@
     "bill_date": "6/9/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur",
     "merchant": "Vinder"
@@ -1578,7 +1721,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "4/14/2022",
     "created_by": "system",
-    "payment_mode": "bank_transfer",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam",
     "merchant": "Centizu"
@@ -1589,7 +1733,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "3/19/2022",
     "created_by": "system",
-    "payment_mode": "debit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem",
     "merchant": "Skaboo"
@@ -1601,6 +1746,7 @@
     "bill_date": "3/30/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in",
     "merchant": "Rhycero"
@@ -1612,6 +1758,7 @@
     "bill_date": "2/24/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl",
     "merchant": "Oyoyo"
@@ -1623,6 +1770,7 @@
     "bill_date": "2/28/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "current",
     "description": "erat volutpat in congue etiam justo etiam pretium iaculis justo",
     "merchant": "Vitz"
@@ -1634,6 +1782,7 @@
     "bill_date": "12/30/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "savings",
     "description": "massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh",
     "merchant": "Zooveo"
@@ -1645,6 +1794,7 @@
     "bill_date": "7/2/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "credit",
     "description": "pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl",
     "merchant": "Devpulse"
@@ -1656,6 +1806,7 @@
     "bill_date": "1/3/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus",
     "merchant": "Zooveo"
@@ -1667,6 +1818,7 @@
     "bill_date": "1/8/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat",
     "merchant": "Dynava"
@@ -1678,6 +1830,7 @@
     "bill_date": "3/5/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla",
     "merchant": "Riffwire"
@@ -1689,6 +1842,7 @@
     "bill_date": "6/24/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio",
     "merchant": "Wikibox"
@@ -1699,7 +1853,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "10/4/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue",
     "merchant": "Thoughtstorm"
@@ -1711,6 +1866,7 @@
     "bill_date": "1/1/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris",
     "merchant": "Omba"
@@ -1721,7 +1877,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "12/19/2022",
     "created_by": "system",
-    "payment_mode": "bank_transfer",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem",
     "merchant": "Leenti"
@@ -1733,6 +1890,7 @@
     "bill_date": "11/21/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue",
     "merchant": "Jabbersphere"
@@ -1743,7 +1901,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "3/8/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "aenean fermentum donec ut mauris eget massa tempor convallis nulla neque",
     "merchant": "Agivu"
@@ -1755,6 +1914,7 @@
     "bill_date": "9/24/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "income",
     "account": "current",
     "description": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed",
     "merchant": "Browsetype"
@@ -1765,7 +1925,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "5/18/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan",
     "merchant": "Izio"
@@ -1777,6 +1938,7 @@
     "bill_date": "5/3/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque",
     "merchant": "Geba"
@@ -1788,6 +1950,7 @@
     "bill_date": "4/20/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id",
     "merchant": "Ailane"
@@ -1799,6 +1962,7 @@
     "bill_date": "4/25/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales",
     "merchant": "Skyble"
@@ -1809,7 +1973,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "8/3/2022",
     "created_by": "system",
-    "payment_mode": "credit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "aliquam erat volutpat in congue etiam justo etiam pretium iaculis",
     "merchant": "Zoomzone"
@@ -1821,6 +1986,7 @@
     "bill_date": "1/15/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "savings",
     "description": "sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet",
     "merchant": "Rhyloo"
@@ -1832,6 +1998,7 @@
     "bill_date": "7/23/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus",
     "merchant": "Yozio"
@@ -1843,6 +2010,7 @@
     "bill_date": "12/21/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in",
     "merchant": "Plajo"
@@ -1854,6 +2022,7 @@
     "bill_date": "5/21/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "savings",
     "description": "penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis",
     "merchant": "Twitterbeat"
@@ -1864,7 +2033,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "11/12/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "mauris eget massa tempor convallis nulla neque libero convallis eget eleifend",
     "merchant": "Camimbo"
@@ -1876,6 +2046,7 @@
     "bill_date": "9/10/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam",
     "merchant": "Flashset"
@@ -1886,7 +2057,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "7/17/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "upi",
+    "type": "expense",
     "account": "wallet",
     "description": "ligula nec sem duis aliquam convallis nunc proin at turpis a",
     "merchant": "Browsecat"
@@ -1898,6 +2070,7 @@
     "bill_date": "5/18/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac",
     "merchant": "Realmix"
@@ -1908,7 +2081,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "7/30/2022",
     "created_by": "system",
-    "payment_mode": "debit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum",
     "merchant": "Bluezoom"
@@ -1919,7 +2093,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "2/19/2022",
     "created_by": "system",
-    "payment_mode": "bank_transfer",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id",
     "merchant": "Trupe"
@@ -1931,6 +2106,7 @@
     "bill_date": "7/6/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu",
     "merchant": "Quimba"
@@ -1942,6 +2118,7 @@
     "bill_date": "2/13/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "savings",
     "description": "ornare consequat lectus in est risus auctor sed tristique in",
     "merchant": "LiveZ"
@@ -1953,6 +2130,7 @@
     "bill_date": "1/2/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "wallet",
     "description": "dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat",
     "merchant": "Browsecat"
@@ -1963,7 +2141,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "3/7/2022",
     "created_by": "system",
-    "payment_mode": "cash",
+    "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet",
     "merchant": "Trupe"
@@ -1974,7 +2153,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "2/14/2022",
     "created_by": "system",
-    "payment_mode": "bank_transfer",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "non mi integer ac neque duis bibendum morbi non quam nec",
     "merchant": "Quatz"
@@ -1986,6 +2166,7 @@
     "bill_date": "1/13/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "credit",
     "description": "velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante",
     "merchant": "Tazzy"
@@ -1996,7 +2177,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "6/9/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis",
     "merchant": "Ntags"
@@ -2007,7 +2189,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "10/26/2022",
     "created_by": "system",
-    "payment_mode": "bank_transfer",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut",
     "merchant": "Rhynyx"
@@ -2019,6 +2202,7 @@
     "bill_date": "5/3/2022",
     "created_by": "system",
     "payment_mode": "credit_card",
+    "type": "expense",
     "account": "current",
     "description": "vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi",
     "merchant": "Livefish"
@@ -2030,6 +2214,7 @@
     "bill_date": "7/24/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "savings",
     "description": "in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula",
     "merchant": "Babbleblab"
@@ -2040,7 +2225,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "4/11/2022",
     "created_by": "system",
-    "payment_mode": "debit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam",
     "merchant": "Gigaclub"
@@ -2052,6 +2238,7 @@
     "bill_date": "11/1/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "savings",
     "description": "id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "merchant": "Izio"
@@ -2063,6 +2250,7 @@
     "bill_date": "1/1/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede",
     "merchant": "Yodel"
@@ -2074,6 +2262,7 @@
     "bill_date": "10/10/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "credit",
     "description": "lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu",
     "merchant": "Devbug"
@@ -2085,6 +2274,7 @@
     "bill_date": "5/7/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet",
     "merchant": "Mynte"
@@ -2096,6 +2286,7 @@
     "bill_date": "10/14/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan",
     "merchant": "Divanoodle"
@@ -2107,6 +2298,7 @@
     "bill_date": "7/3/2022",
     "created_by": "system",
     "payment_mode": "debit_card",
+    "type": "expense",
     "account": "savings",
     "description": "ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
     "merchant": "Gabspot"
@@ -2117,7 +2309,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "12/21/2022",
     "created_by": "system",
-    "payment_mode": "credit_card",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus",
     "merchant": "Blognation"
@@ -2129,6 +2322,7 @@
     "bill_date": "3/23/2022",
     "created_by": "system",
     "payment_mode": "upi",
+    "type": "expense",
     "account": "current",
     "description": "lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales",
     "merchant": "Rooxo"
@@ -2139,7 +2333,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "12/4/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper",
     "merchant": "Roombo"
@@ -2150,7 +2345,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "8/16/2022",
     "created_by": "system",
-    "payment_mode": "bank_transfer",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum",
     "merchant": "Bubblemix"
@@ -2161,7 +2357,8 @@
     "image_url": "https://placehold.co/400x400",
     "bill_date": "5/24/2022",
     "created_by": "system",
-    "payment_mode": "upi",
+    "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo",
     "merchant": "Izio"
@@ -2173,6 +2370,7 @@
     "bill_date": "2/4/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "credit",
     "description": "viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est",
     "merchant": "Voonix"
@@ -2184,6 +2382,7 @@
     "bill_date": "4/21/2022",
     "created_by": "system",
     "payment_mode": "bank_transfer",
+    "type": "expense",
     "account": "wallet",
     "description": "in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
     "merchant": "Pixoboo"
@@ -2195,6 +2394,7 @@
     "bill_date": "7/6/2022",
     "created_by": "system",
     "payment_mode": "cash",
+    "type": "expense",
     "account": "cash",
     "description": "phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate",
     "merchant": "Twitterlist"

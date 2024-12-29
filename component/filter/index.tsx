@@ -1,5 +1,5 @@
 import { CATEGORIES, PAYMENT_MODES } from "@/constant";
-import { ExpenseType } from "@/types";
+import { ExpenseObjType } from "@/types";
 import { toTitleCase } from "@/utils";
 import styles from "./filter.module.css";
 
@@ -17,7 +17,7 @@ const filterConfig = [
 export const Filter = ({
   onCategoryChange,
 }: {
-  onCategoryChange: (attr: keyof ExpenseType, value: string) => void;
+  onCategoryChange: (attr: keyof ExpenseObjType, value: string) => void;
 }) => {
   return (
     <div className={styles.filter}>
@@ -27,7 +27,7 @@ export const Filter = ({
           <select
             id={type}
             onChange={(e) =>
-              onCategoryChange(type as keyof ExpenseType, e.target.value)
+              onCategoryChange(type as keyof ExpenseObjType, e.target.value)
             }
           >
             <option value="">All</option>
