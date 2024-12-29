@@ -6,12 +6,6 @@ import { ExpenseObjType } from "@/types";
 const expType = ["expense", "income"] as const;
 
 const LeftPane = ({ expenses }: { expenses: ExpenseObjType[] }) => {
-  console.log(expenses);
-
-  if (!expenses?.length) {
-    return <h2>No expenses found</h2>;
-  }
-
   return (
     <section className={styles.left_pane}>
       <h3 className={styles.title}>Expense Distribution</h3>

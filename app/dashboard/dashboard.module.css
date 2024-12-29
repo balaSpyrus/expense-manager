@@ -1,15 +1,14 @@
 .container {
-    height: 100%;
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    overflow: auto;
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  overflow: auto;
 }
 
 @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

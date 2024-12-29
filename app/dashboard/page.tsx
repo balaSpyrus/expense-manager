@@ -29,8 +29,6 @@ const getExpenses = async () => {
 
 const Page = async () => {
   const expenses = await getExpenses();
-  console.log(expenses);
-
   return (
     <div className={styles.container}>
       <MainLayout expenses={expenses} />
