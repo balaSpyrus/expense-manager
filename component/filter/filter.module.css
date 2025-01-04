@@ -6,12 +6,19 @@
   border-radius: 1rem;
 }
 
-.filter select {
-  margin-left: 6px;
+.filter label {
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 @media screen and (max-width: 768px) {
   .filter {
+    flex-direction: column;
     background-color: rgb(53 53 53);
+  }
+
+  .filter label > div {
+    flex: 1;
   }
 }

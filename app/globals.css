@@ -92,19 +92,58 @@ a {
   animation: loadingAnimation 0.5s infinite;
 }
 
-select {
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  h1 {
+    font-size: 2rem;
+    color: rgb(204, 53, 53);
+  }
+}
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 50px;
   border: none;
-  background-color: #ffffff2d;
+  background-color: #6a2525;
+  box-shadow: 0 0 5px 0 var(--foreground);
   color: var(--foreground);
   font-size: 1rem;
   cursor: pointer;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #8c2f2f;
+    box-shadow: 0 0 10px 0 var(--foreground);
+  }
 }
 
-option {
-  background-color: black;
-  color: var(--foreground);
+.em-select {
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff2d;
+    color: var(--foreground);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  option {
+    background-color: black;
+    color: var(--foreground);
+  }
 }
 @media (prefers-color-scheme: dark) {
   html {

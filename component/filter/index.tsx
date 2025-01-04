@@ -2,6 +2,7 @@ import { CATEGORIES, PAYMENT_MODES } from "@/constant";
 import { FilterAttrType } from "@/types";
 import { toTitleCase } from "@/utils";
 import styles from "./filter.module.css";
+import EMSelect from "../atoms/select";
 
 const filterConfig = [
   {
@@ -24,19 +25,14 @@ export const Filter = ({
       {filterConfig.map(({ type, options }) => (
         <label key={type} htmlFor={type}>
           Filter by {toTitleCase(type)} :
-          <select
+          <EMSelect
+            titleCase
             id={type}
-            onChange={(e) =>
-              onCategoryChange(type as FilterAttrType, e.target.value)
+            onChange={(value) =>
+              onCategoryChange(type as FilterAttrType, value)
             }
-          >
-            <option value="">All</option>
-            {options.map((value) => (
-              <option value={value} key={value}>
-                {toTitleCase(value)}
-              </option>
-            ))}
-          </select>
+            options={["", ...options]}
+          />
         </label>
       ))}
     </div>

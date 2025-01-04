@@ -87,7 +87,7 @@ const ExpenseList: FC<Props> = ({ expenses: expenseProps }) => {
         <AutoSizer>
           {({ width, height }) => (
             <List
-              height={height - 70}
+              height={height - 85}
               onRowsRendered={onRowsRendered}
               ref={registerChild}
               rowCount={rowCount}

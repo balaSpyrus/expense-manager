@@ -3,8 +3,9 @@ import { getChartData } from "@/lib";
 import { ExpenseObjType, FilterAttrType } from "@/types";
 import { ChartData, PieController } from "chart.js";
 import Chart from "chart.js/auto";
-import { ChangeEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Pie } from "react-chartjs-2";
+import EMSelect from "../atoms/select";
 
 Chart.register(PieController);
 
@@ -13,9 +14,9 @@ const PieChart = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   const [chartData, setChartData] =
     useState<ChartData<"pie", number[], unknown>>();
 
-  const onChange: ChangeEventHandler<HTMLSelectElement> = (e) => {
-    setSelected(e.target.value as FilterAttrType);
-    getChartData(expenses, e.target.value as FilterAttrType).then((data) => {
+  const onChange = (value: string) => {
+    setSelected(value as FilterAttrType);
+    getChartData(expenses, value as FilterAttrType).then((data) => {
       setChartData(data);
     });
   };
@@ -32,11 +33,12 @@ const PieChart = ({ expenses }: { expenses: ExpenseObjType[] }) => {
 
   return (
     <>
-      <select onChange={onChange} value={selected}>
-        <option value={"category"}>Category</option>
-        <option value={"payment_mode"}>Payment Mode</option>
-        <option value={"account"}>Account</option>
-      </select>
+      <EMSelect
+        titleCase
+        onChange={onChange}
+        value={selected}
+        options={["category", "payment_mode", "account"]}
+      />
       <Pie
         id="pie-chart"
         data={chartData}
