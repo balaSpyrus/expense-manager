@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 const provider = new GoogleAuthProvider();
 
 export default function Home() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [user, setUser] = useState<any>();
   const onClick = () => {
     signInWithPopup(auth, provider)
