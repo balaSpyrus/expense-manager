@@ -1,42 +1,59 @@
 "use client";
 import auth from "@/auth";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { useState } from "react";
+import {
+  getAdditionalUserInfo,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+  User,
+} from "firebase/auth";
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
 const provider = new GoogleAuthProvider();
 
 export default function Home() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [user, setUser] = useState<any>();
+  const [user, setUser] = useState<User | null>(null);
   const onClick = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential?.accessToken;
-        // The signed-in user info.
-        const user = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
-        console.log("====================================");
-        console.log(token, user);
-        console.log("====================================");
+    if (user) {
+      signOut(auth);
+    } else {
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const token = credential?.accessToken;
+          // The signed-in user info.
+          const user = result.user;
+          // IdP data available using getAdditionalUserInfo(result)
+          // ...
+          console.log("====================================");
+          console.log(token, user, getAdditionalUserInfo(result));
+          console.log("====================================");
 
-        setUser(user);
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
+          // setUser(user);
+        })
+        .catch((error) => {
+          // Handle Errors here.
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // The email of the user's account used.
+          const email = error.customData.email;
+          // The AuthCredential type that was used.
+          const credential = GoogleAuthProvider.credentialFromError(error);
 
-        console.log(errorCode, errorMessage, email, credential);
-      });
+          console.log(errorCode, errorMessage, email, credential);
+        });
+    }
   };
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      console.log(user);
+      setUser(user);
+    });
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -53,10 +70,10 @@ export default function Home() {
             whiteSpace: "break-spaces",
           }}
         >
-          {JSON.stringify(user, null, 4)}
+          {JSON.stringify(user.providerData, null, 4)}
         </pre>
       )}
-      <button onClick={onClick}>Login</button>
+      <button onClick={onClick}>{user ? "logout" : "login"}</button>
     </div>
   );
 }
