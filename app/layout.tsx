@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { CircleUserRound } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,11 +39,13 @@ export default function RootLayout({
               <Link href="/configure">Configure</Link>
             </li>
             <li>
-              <Link href="/user/dummy">Account</Link>
+              <Link href="/user/dummy">
+                <CircleUserRound />
+              </Link>
             </li>
           </ul>
         </nav>
-        <main style={{ height: "calc(100% - 60px" }}>{children}</main>
+        <main style={{ height: "calc(100% - 62px" }}>{children}</main>
       </body>
     </html>
   );

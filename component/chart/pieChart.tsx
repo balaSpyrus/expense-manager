@@ -5,7 +5,7 @@ import { ChartData, PieController } from "chart.js";
 import Chart from "chart.js/auto";
 import { useEffect, useState } from "react";
 import { Pie } from "react-chartjs-2";
-import EMSelect from "../atoms/select";
+import Dropdown from "../atoms/dropdown";
 
 Chart.register(PieController);
 
@@ -33,7 +33,7 @@ const PieChart = ({ expenses }: { expenses: ExpenseObjType[] }) => {
 
   return (
     <>
-      <EMSelect
+      <Dropdown
         titleCase
         onChange={onChange}
         value={selected}

@@ -4,12 +4,21 @@
   padding: 1rem;
   background-color: rgb(var(--foreground), 0.18);
   border-radius: 1rem;
+  justify-content: flex-start;
 }
 
 .filter label {
   display: flex;
   align-items: center;
   gap: 2px;
+}
+
+.filter label > span {
+  flex: 1;
+}
+
+.filter label > button {
+  flex: 0;
 }
 
 @media screen and (max-width: 768px) {

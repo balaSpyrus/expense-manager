@@ -1,5 +1,5 @@
 import { ExpenseObjType } from "@/types";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import {
   AutoSizer,
   CellMeasurer,
@@ -11,7 +11,7 @@ import {
 } from "react-virtualized";
 import "react-virtualized/styles.css";
 import ExpenseCard from "./expenseCard";
-import { fetchExpenses } from "@/lib";
+// import { fetchExpenses } from "@/lib";
 
 interface Props {
   expenses: ExpenseObjType[];
@@ -19,7 +19,7 @@ interface Props {
 
 const ExpenseList: FC<Props> = ({ expenses: expenseProps }) => {
   const [expenses, setExpenses] = useState<ExpenseObjType[]>([]);
-  const [rowCount] = useState(500);
+  // const [rowCount] = useState(expenses.length);
   const cache = new CellMeasurerCache({
     fixedWidth: true,
     defaultHeight: 270, // Default height before measuring
@@ -35,12 +35,12 @@ const ExpenseList: FC<Props> = ({ expenses: expenseProps }) => {
       }, 1000);
     });
 
-    let newExpenses = [];
+    let newExpenses: ExpenseObjType[] = [];
 
     if (startIndex < expenseProps.length) {
       newExpenses = expenseProps.slice(startIndex, stopIndex);
     } else {
-      newExpenses = await fetchExpenses(startIndex, stopIndex);
+      // newExpenses = await fetchExpenses(startIndex, stopIndex);
     }
 
     setExpenses((prev) => {
@@ -77,11 +77,15 @@ const ExpenseList: FC<Props> = ({ expenses: expenseProps }) => {
     );
   };
 
+  useEffect(() => {
+    setExpenses(expenseProps);
+  }, [expenseProps]);
+
   return (
     <InfiniteLoader
       isRowLoaded={isRowLoaded}
       loadMoreRows={loadMoreRows}
-      rowCount={rowCount}
+      rowCount={expenseProps.length}
     >
       {({ onRowsRendered, registerChild }) => (
         <AutoSizer>
@@ -90,7 +94,7 @@ const ExpenseList: FC<Props> = ({ expenses: expenseProps }) => {
               height={height - 85}
               onRowsRendered={onRowsRendered}
               ref={registerChild}
-              rowCount={rowCount}
+              rowCount={expenseProps.length}
               rowHeight={cache.rowHeight}
               rowRenderer={rowRenderer}
               width={width}

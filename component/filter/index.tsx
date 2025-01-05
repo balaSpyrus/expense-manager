@@ -1,8 +1,8 @@
 import { CATEGORIES, PAYMENT_MODES } from "@/constant";
 import { FilterAttrType } from "@/types";
 import { toTitleCase } from "@/utils";
+import Dropdown from "../atoms/dropdown";
 import styles from "./filter.module.css";
-import EMSelect from "../atoms/select";
 
 const filterConfig = [
   {
@@ -15,6 +15,8 @@ const filterConfig = [
   },
 ];
 
+const cache: Record<string, string> = {};
+
 export const Filter = ({
   onCategoryChange,
 }: {
@@ -24,14 +26,17 @@ export const Filter = ({
     <div className={styles.filter}>
       {filterConfig.map(({ type, options }) => (
         <label key={type} htmlFor={type}>
-          Filter by {toTitleCase(type)} :
-          <EMSelect
+          <span>Filter by {toTitleCase(type)} :</span>
+          <Dropdown
             titleCase
             id={type}
-            onChange={(value) =>
-              onCategoryChange(type as FilterAttrType, value)
-            }
-            options={["", ...options]}
+            value={cache[type] || "all"}
+            onChange={(value) => {
+              const val = value === "all" ? "" : value;
+              onCategoryChange(type as FilterAttrType, val);
+              cache[type] = val;
+            }}
+            options={["all", ...options]}
           />
         </label>
       ))}

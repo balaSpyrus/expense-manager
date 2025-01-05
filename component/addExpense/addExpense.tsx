@@ -1,8 +1,7 @@
 import { ACCOUNTS, CATEGORIES, PAYMENT_MODES } from "@/constant";
-import EMSelect from "../atoms/select";
+import Dropdown from "../atoms/dropdown";
 import { useActionState } from "react";
 import styles from "./addExpense.module.css";
-
 const AddExpense = () => {
   const [state, dispatch, pending] = useActionState(() => ({}), {});
   return (
@@ -13,7 +12,7 @@ const AddExpense = () => {
       </div>
       <div className={styles["form-group"]}>
         <label htmlFor="category">Category</label>
-        <EMSelect
+        <Dropdown
           titleCase
           className={styles["form-control"]}
           id="category"
@@ -22,7 +21,7 @@ const AddExpense = () => {
       </div>
       <div className={styles["form-group"]}>
         <label htmlFor="payment_mode">Payment Mode</label>
-        <EMSelect
+        <Dropdown
           titleCase
           className={styles["form-control"]}
           id="payment_mode"
@@ -39,7 +38,7 @@ const AddExpense = () => {
       </div>
       <div className={styles["form-group"]}>
         <label htmlFor="account">Account</label>
-        <EMSelect
+        <Dropdown
           titleCase
           className={styles["form-control"]}
           id="account"
