@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
-import styles from "./page.module.css";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "@/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useState } from "react";
+import styles from "./page.module.css";
 
 const provider = new GoogleAuthProvider();
 
