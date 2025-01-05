@@ -2,7 +2,7 @@
   display: flex;
   gap: 6px;
   padding: 1rem;
-  background-color: #ffffff2d;
+  background-color: rgb(var(--foreground), 0.18);
   border-radius: 1rem;
 }
 
@@ -15,7 +15,6 @@
 @media screen and (max-width: 768px) {
   .filter {
     flex-direction: column;
-    background-color: rgb(53 53 53);
   }
 
   .filter label > div {

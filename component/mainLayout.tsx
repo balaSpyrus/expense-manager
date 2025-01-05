@@ -5,7 +5,7 @@ import { useState } from "react";
 import AddBtn from "./addBtn";
 import LeftPane from "./leftPane/page";
 import RightPane from "./rightPane/page";
-import AddExpense from "./addExpense";
+import AddExpense from "./addExpense/addExpense";
 
 const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   const [showAdd, setShowAdd] = useState(false);

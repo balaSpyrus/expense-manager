@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  background-color: #ffffff2d;
+  background-color: rgb(var(--foreground), 0.18);
   border-radius: 1rem;
 }
 
@@ -24,7 +24,7 @@
   flex: 1;
   flex-direction: column;
   gap: 12px;
-  background-color: #ffffff2d;
+  background-color: rgb(var(--foreground), 0.18);
   padding: 1rem;
   border-radius: 1rem;
 }

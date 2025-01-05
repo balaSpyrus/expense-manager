@@ -1,10 +1,10 @@
 .card {
   display: flex;
   flex-direction: row;
-  background-color: #f9f9f9;
+  background-color: rgb(var(--foreground));
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(var(--background), 0.1);
   margin: 12px 0;
   width: 100%;
 }
@@ -46,7 +46,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #00000064;
+  background-color: rgba(var(--foreground), 0.4);
   color: white;
   padding: 0.5rem;
   border-radius: 0 8px 0 8px;
@@ -62,7 +62,7 @@
   gap: 0.25rem;
   align-items: center;
   justify-content: center;
-  background-color: rgb(53 53 53);
+  background-color: rgba(var(--background), 0.8);
 }
 
 .amount p:first-child {
@@ -72,7 +72,7 @@
 
 .amount p {
   font-size: 20px;
-  color: #ffffff;
+  color: rgb(var(--foreground));
 }
 
 .description {
@@ -127,5 +127,23 @@
 
   .amount {
     min-width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .date,
+  .amount,
+  .description,
+  .createdBy {
+    font-size: 0.9rem;
+    color: rgb(var(--background));
+  }
+
+  .amount p:first-child {
+    color: #333;
+  }
+
+  .category {
+    color: skyblue;
   }
 }
