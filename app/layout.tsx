@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { CircleUserRound } from "lucide-react";
+import NavBar from "@/component/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,25 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <nav className="nav">
-          <h1>
-            <Link href="/">Expense Manager</Link>
-          </h1>
-          <ul>
-            <li>
-              <Link href="/dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <Link href="/configure">Configure</Link>
-            </li>
-            <li>
-              <Link href="/user/dummy">
-                <CircleUserRound />
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <main style={{ height: "calc(100% - 62px" }}>{children}</main>
+        <NavBar />
+        <main style={{ height: "calc(100% - 80px" }}>{children}</main>
       </body>
     </html>
   );

@@ -1,16 +1,26 @@
 "use client";
 import { toTitleCase } from "@/utils";
 import clsx from "clsx";
-import React, { FC, HTMLProps, useEffect, useRef, useState } from "react";
+import React, {
+  ButtonHTMLAttributes,
+  FC,
+  HTMLProps,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import ReactDOM from "react-dom";
 import styles from "./dropdown.module.css";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-interface Props extends Omit<HTMLProps<HTMLUListElement>, "onChange"> {
+interface Props
+  extends Omit<HTMLProps<HTMLUListElement>, "onChange" | "value"> {
   options: string[];
-  value?: string;
+  value?: ReactNode;
   titleCase?: boolean;
   onChange?: (value: string) => void;
+  buttonProps?: ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
 const Dropdown: FC<Props> = ({
@@ -20,6 +30,7 @@ const Dropdown: FC<Props> = ({
   className,
   id,
   style,
+  buttonProps,
   titleCase = false,
   ...rest
 }) => {
@@ -58,9 +69,12 @@ const Dropdown: FC<Props> = ({
       <button
         ref={buttonRef}
         onClick={toggleDropdown}
-        className={styles.dropdownBtn}
+        {...buttonProps}
+        className={clsx(buttonProps?.className, styles.dropdownBtn)}
       >
-        {titleCase ? toTitleCase(value ?? "") : value}
+        {titleCase && typeof value === "string"
+          ? toTitleCase(value ?? "")
+          : value}
         {isOpen ? <ChevronUp /> : <ChevronDown />}
       </button>
 

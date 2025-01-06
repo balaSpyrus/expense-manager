@@ -1,13 +1,16 @@
 "use client";
 import { filterExpenses } from "@/lib";
+import { useUserDetails } from "@/lib/hook";
 import { ExpenseObjType, FilterAttrType } from "@/types";
-import { useState } from "react";
+import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
 import AddBtn from "./addBtn";
+import AddExpense from "./addExpense/addExpense";
 import LeftPane from "./leftPane/page";
 import RightPane from "./rightPane/page";
-import AddExpense from "./addExpense/addExpense";
 
 const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
+  const { user, isLoading } = useUserDetails();
   const [showAdd, setShowAdd] = useState(false);
   const [filteredExpenses, setFilteredExpenses] = useState(expenses);
   const [filterConfig, setFilterConfig] = useState<{
@@ -28,6 +31,12 @@ const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   const onClick = () => {
     setShowAdd((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (!user && !isLoading) {
+      redirect("/");
+    }
+  }, [user, isLoading]);
 
   return (
     <>
