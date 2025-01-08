@@ -44,7 +44,7 @@ a {
   height: 100vh;
 }
 
-.nav {
+.nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,17 +52,17 @@ a {
   background-color: rgb(var(--foreground), 0.18);
 }
 
-.nav h1 {
+.nav-bar h1 {
   font-size: 1.5rem;
 }
 
-.nav ul {
+.nav-bar ul {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-.nav ul li {
+.nav-bar ul li {
   list-style: none;
 }
 

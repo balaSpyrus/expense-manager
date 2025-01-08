@@ -1,7 +1,6 @@
-import React from "react";
-import styles from "./leftpane.module.css";
-import PieChart from "@/component/chart/pieChart";
+import ExpenseStats from "@/component/expenseStats";
 import { ExpenseObjType } from "@/types";
+import styles from "./leftpane.module.css";
 
 const expType = ["expense", "income"] as const;
 
@@ -26,7 +25,7 @@ const LeftPane = ({ expenses }: { expenses: ExpenseObjType[] }) => {
           </span>
         ))}
       </div>
-      <PieChart expenses={expenses} />
+      <ExpenseStats expenses={expenses} />
     </section>
   );
 };

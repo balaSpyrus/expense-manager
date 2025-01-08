@@ -1,7 +1,6 @@
 import ExpenseList from "@/component/expense-list";
 import { Filter } from "@/component/filter";
 import { ExpenseObjType, FilterAttrType } from "@/types";
-import React from "react";
 import styles from "./rightpane.module.css";
 
 const RightPane = ({

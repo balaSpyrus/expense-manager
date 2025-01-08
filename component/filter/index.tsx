@@ -30,13 +30,17 @@ export const Filter = ({
           <Dropdown
             titleCase
             id={type}
-            value={cache[type] || "all"}
+            value={cache[type] || ""}
             onChange={(value) => {
-              const val = value === "all" ? "" : value;
-              onCategoryChange(type as FilterAttrType, val);
-              cache[type] = val;
+              onCategoryChange(type as FilterAttrType, value);
+              cache[type] = value;
             }}
-            options={["all", ...options]}
+            renderValue={(value) => (
+              <>{value === "" ? "All" : toTitleCase(value as string)}</>
+            )}
+            displayEmpty
+            emptyRenderValue="All"
+            options={["", ...options]}
           />
         </label>
       ))}

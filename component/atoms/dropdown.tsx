@@ -1,26 +1,14 @@
 "use client";
 import { toTitleCase } from "@/utils";
+import { FormControl, MenuItem, Select, SelectProps } from "@mui/material";
 import clsx from "clsx";
-import React, {
-  ButtonHTMLAttributes,
-  FC,
-  HTMLProps,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-import ReactDOM from "react-dom";
-import styles from "./dropdown.module.css";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { FC, ReactNode } from "react";
 
-interface Props
-  extends Omit<HTMLProps<HTMLUListElement>, "onChange" | "value"> {
+interface Props extends Omit<SelectProps, "onChange"> {
   options: string[];
-  value?: ReactNode;
   titleCase?: boolean;
+  emptyRenderValue?: ReactNode;
   onChange?: (value: string) => void;
-  buttonProps?: ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
 const Dropdown: FC<Props> = ({
@@ -30,85 +18,42 @@ const Dropdown: FC<Props> = ({
   className,
   id,
   style,
-  buttonProps,
+  name,
+  emptyRenderValue,
   titleCase = false,
   ...rest
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [position, setPosition] = useState({ top: 0, left: 0, width: 0 });
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
-  const toggleDropdown = () => {
-    if (buttonRef.current) {
-      const rect = buttonRef.current?.getBoundingClientRect();
-      setPosition({
-        top: rect.bottom + window.scrollY,
-        left: rect.left + window.scrollX,
-        width: rect.width,
-      });
-    }
-    setIsOpen(!isOpen);
-  };
-
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      buttonRef.current &&
-      !buttonRef.current.contains(event.target as Node)
-    ) {
-      setIsOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
-  }, []);
-
   return (
-    <>
-      <button
-        ref={buttonRef}
-        onClick={toggleDropdown}
-        {...buttonProps}
-        className={clsx(buttonProps?.className, styles.dropdownBtn)}
+    <FormControl sx={{ m: 1, minWidth: 120 }} style={style}>
+      <Select
+        id={id}
+        sx={{
+          p: 0.2,
+        }}
+        name={name ?? id}
+        className={clsx(className)}
+        value={value}
+        onChange={(e) => {
+          onChange?.(e.target.value as string);
+        }}
+        style={{
+          color: "rgb(var(--foreground))",
+          border: "1px solid rgb(var(--foreground))",
+          maxHeight: 36,
+        }}
+        {...rest}
       >
-        {titleCase && typeof value === "string"
-          ? toTitleCase(value ?? "")
-          : value}
-        {isOpen ? <ChevronUp /> : <ChevronDown />}
-      </button>
-
-      {isOpen &&
-        typeof document !== "undefined" &&
-        ReactDOM.createPortal(
-          <ul
-            className={clsx(styles.dropdownMenu, className)}
-            id={id}
-            style={{
-              ...style,
-              top: `${position.top + 4}px`,
-              left: `${position.left}px`,
-              width: `${position.width}px`,
-            }}
-            {...rest}
-          >
-            {options.map((option, index) => (
-              <li
-                role="button"
-                key={index}
-                className={styles.dropdownItem} // Use CSS module
-                onClick={() => {
-                  onChange?.(option);
-                  setIsOpen(false);
-                }}
-              >
-                {titleCase ? toTitleCase(option) : option}
-              </li>
-            ))}
-          </ul>,
-          document.body
-        )}
-    </>
+        {options.map((option, index) => (
+          <MenuItem value={option} key={index}>
+            {emptyRenderValue && !option
+              ? emptyRenderValue
+              : titleCase
+              ? toTitleCase(option)
+              : option}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 };
 

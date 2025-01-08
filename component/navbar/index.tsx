@@ -2,24 +2,42 @@
 "use client";
 import auth from "@/auth";
 import { useUserDetails } from "@/lib/hook";
+import { Login, Logout } from "@mui/icons-material";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import {
+  Button,
+  Divider,
+  ListItemIcon,
+  ListItemText,
+  Menu,
+  MenuItem,
+  Typography,
+} from "@mui/material";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
-import { CircleUserRound } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import Dropdown from "../atoms/dropdown";
+import { useState } from "react";
 import styles from "./navbar.module.css";
 
 const provider = new GoogleAuthProvider();
 
 const NavBar = () => {
   const { user } = useUserDetails();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = (value?: string) => {
+    setAnchorEl(null);
 
-  const onChange = (value: string) => {
     switch (value) {
-      case "Account Settings":
+      case "settings":
         redirect(`/user/${user?.uid}`);
-      default:
+      case "login":
+      case "logout":
         if (user) {
           signOut(auth);
         } else {
@@ -39,11 +57,13 @@ const NavBar = () => {
             });
         }
         break;
+      default:
+        break;
     }
   };
 
   return (
-    <nav className="nav">
+    <nav className="nav-bar">
       <h1>
         <Link href="/">Expense Manager</Link>
       </h1>
@@ -55,34 +75,63 @@ const NavBar = () => {
           <Link href="/configure">Configure</Link>
         </li>
         <li>
-          <Dropdown
-            buttonProps={{
-              className: styles.user_dd,
+          <Button
+            id="basic-button"
+            aria-controls={open ? "basic-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+            sx={{
+              color: "rgb(var(--foreground))",
             }}
-            value={
-              user ? (
-                <>
-                  <Image
-                    className={styles.avatar}
-                    src={user.photoURL ?? ""}
-                    width={20}
-                    height={20}
-                    alt=""
-                  />
-                  <span>
-                    {user.displayName
-                      ?.split(" ")
-                      .map((each) => each.charAt(0))
-                      .join("")}
-                  </span>
-                </>
-              ) : (
-                <CircleUserRound />
-              )
-            }
-            options={["Account Settings", user ? "Logout" : "Login"]}
-            onChange={onChange}
-          />
+          >
+            {user ? (
+              <>
+                <Image
+                  className={styles.avatar}
+                  src={user.photoURL ?? ""}
+                  width={20}
+                  height={20}
+                  alt=""
+                />
+                <Typography variant="h1" fontWeight={600}>
+                  {user.displayName
+                    ?.split(" ")
+                    .map((each) => each.charAt(0))
+                    .join("")}
+                </Typography>
+              </>
+            ) : (
+              <AccountCircleOutlinedIcon />
+            )}
+          </Button>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={() => handleClose()}
+            MenuListProps={{
+              "aria-labelledby": "basic-button",
+            }}
+          >
+            <MenuItem onClick={() => handleClose("settings")}>
+              <ListItemIcon>
+                <ConstructionIcon fontSize="small" />
+              </ListItemIcon>
+              <ListItemText>Account Settings</ListItemText>
+            </MenuItem>
+            <Divider />
+            <MenuItem onClick={() => handleClose(user ? "logout" : "login")}>
+              <ListItemIcon>
+                {user ? (
+                  <Logout fontSize="small" />
+                ) : (
+                  <Login fontSize="small" />
+                )}
+              </ListItemIcon>
+              {user ? "Logout" : "Login"}
+            </MenuItem>
+          </Menu>
         </li>
       </ul>
     </nav>

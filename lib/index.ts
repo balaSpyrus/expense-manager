@@ -1,7 +1,5 @@
 import { PALETTE } from "@/constant";
-import { AttrInfoType, ExpenseObjType, FilterAttrType } from "@/types";
-import { toTitleCase } from "@/utils";
-import type { ChartData } from "chart.js";
+import { ChartData, ExpenseObjType, FilterAttrType } from "@/types";
 
 // lib/filterExpenses.ts
 export const filterExpenses = async (
@@ -14,37 +12,6 @@ export const filterExpenses = async (
     );
 });
 
-export async function getChartData(
-    expenses: ExpenseObjType[],
-    selected: FilterAttrType
-): Promise<ChartData<"pie", number[], unknown>> {
-    const labels: string[] = [];
-    const colors: string[] = [];
-    const data: number[] = [];
-
-    // Process the expenses based on the selected attribute
-    Object.values(await getAttrwiseInfo(expenses, selected)).forEach(
-        ({ amount, color, label }) => {
-            labels.push(label);
-            colors.push(color);
-            data.push(amount);
-        }
-    );
-
-    // Return chart data in the required format
-    return {
-        labels,
-        datasets: [
-            {
-                label: "Total Expenses",
-                backgroundColor: colors,
-                borderColor: "black",
-                data,
-                hoverOffset: 50,
-            },
-        ],
-    };
-}
 
 // lib/fetchExpenses.ts
 export async function fetchExpenses(startIndex: number, stopIndex: number): Promise<ExpenseObjType[]> {
@@ -71,21 +38,28 @@ export async function fetchExpenses(startIndex: number, stopIndex: number): Prom
     return expenses;
 }
 
-export const getAttrwiseInfo = async (expenses: ExpenseObjType[], attr: keyof typeof PALETTE = 'category') => expenses.reduce(
-    (expense, { total_amount, ...rest }) => {
-        const attrValue = rest[attr];
-        if (expense[attrValue]) {
-            expense[attrValue].amount += +total_amount;
-        } else {
-            expense[attrValue] = {
-                amount: +total_amount,
+export const getChartData = async (expenses: ExpenseObjType[], attr: keyof typeof PALETTE = 'category') => {
 
-                color: PALETTE[attr][attrValue as keyof typeof PALETTE[typeof attr]],
-                label: toTitleCase(attrValue),
-            };
+
+    const chartData = expenses.reduce((acc, curr) => {
+        const key = curr[attr];
+        const existingItem = acc.find((item) => item.label === key);
+        if (existingItem) {
+            existingItem.amount += curr.total_amount;
+        } else {
+            acc.push({
+                label: key,
+                amount: curr.total_amount,
+                color: PALETTE[attr][key as keyof typeof PALETTE[typeof attr]],
+            });
         }
-        return expense;
-    },
-    {} as Record<string, AttrInfoType>
-)
+        return acc;
+    }, [] as ChartData[]);
+
+    const total = chartData.reduce((sum, item) => sum + item.amount, 0);
+    chartData.forEach((item) => (item.total = total));
+
+    return chartData;
+}
+
 
