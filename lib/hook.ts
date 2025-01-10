@@ -9,8 +9,10 @@ export const useUserDetails = () => {
     useEffect(() => {
         setLoading(true)
         auth.onAuthStateChanged((user) => {
-            console.log(user);
             setUser(user);
+            if (!localStorage.getItem("uid")) {
+                localStorage.setItem('uid', user?.uid ?? '')
+            }
             setLoading(false)
         });
     }, []);

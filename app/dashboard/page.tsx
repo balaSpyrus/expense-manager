@@ -1,6 +1,5 @@
 import MainLayout from "@/component/mainLayout";
 import { ExpenseObjType } from "@/types";
-import styles from "./dashboard.module.css";
 
 const getExpenses = async () => {
   let expenses: ExpenseObjType[] = [];
@@ -18,11 +17,7 @@ const getExpenses = async () => {
 
 const Page = async () => {
   const expenses = await getExpenses();
-  return (
-    <div className={styles.container}>
-      <MainLayout expenses={expenses} />
-    </div>
-  );
+  return <MainLayout expenses={expenses} />;
 };
 
 export default Page;

@@ -29,6 +29,11 @@ const Dropdown: FC<Props> = ({
         id={id}
         sx={{
           p: 0.2,
+          border: "1px solid",
+          borderColor: "primary.main",
+          "& .MuiSelect-icon": {
+            color: "primary.main",
+          },
         }}
         name={name ?? id}
         className={clsx(className)}
@@ -37,8 +42,6 @@ const Dropdown: FC<Props> = ({
           onChange?.(e.target.value as string);
         }}
         style={{
-          color: "rgb(var(--foreground))",
-          border: "1px solid rgb(var(--foreground))",
           maxHeight: 36,
         }}
         {...rest}

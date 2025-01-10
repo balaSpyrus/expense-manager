@@ -3,13 +3,6 @@
   --foreground: 23, 23, 23;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 10, 10, 10;
-    --foreground: 237, 237, 237;
-  }
-}
-
 html,
 main,
 body {
@@ -129,24 +122,12 @@ a {
   }
 }
 
-.em-select {
-  select {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(var(--foreground), 0.18);
-    color: rgb(var(--foreground));
-    font-size: 1rem;
-    cursor: pointer;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 10, 10, 10;
+    --foreground: 237, 237, 237;
   }
 
-  option {
-    background-color: rgb(var(--background));
-    color: rgb(var(--foreground));
-  }
-}
-@media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -154,7 +135,7 @@ a {
 
 @media (prefers-color-scheme: light) {
   #pie-chart {
-    background-color: rgb(var(--foreground), 0.9);
+    background-color: rgb(var(--background), 0.5);
   }
 }
 
@@ -167,5 +148,11 @@ a {
   }
   100% {
     opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #pie-chart {
+    min-height: 400px;
   }
 }

@@ -8,6 +8,8 @@ import AddBtn from "./addBtn";
 import AddExpense from "./addExpense/addExpense";
 import LeftPane from "./leftPane/page";
 import RightPane from "./rightPane/page";
+import ThemeProvider from "./themeProvider";
+import { Grid2 } from "@mui/material";
 
 const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   const { user, isLoading } = useUserDetails();
@@ -39,12 +41,21 @@ const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   }, [user, isLoading]);
 
   return (
-    <>
-      {showAdd && <AddExpense />}
-      <LeftPane expenses={filteredExpenses} />
-      <RightPane expenses={filteredExpenses} onFilterChange={onChange} />
-      <AddBtn onClick={onClick} />
-    </>
+    <ThemeProvider>
+      <Grid2
+        container
+        gap={"2rem"}
+        sx={{
+          height: "100%",
+          p: "2rem",
+        }}
+      >
+        {showAdd && <AddExpense />}
+        <LeftPane expenses={filteredExpenses} />
+        <RightPane expenses={filteredExpenses} onFilterChange={onChange} />
+        <AddBtn onClick={onClick} />
+      </Grid2>
+    </ThemeProvider>
   );
 };
 

@@ -1,9 +1,7 @@
 .right_pane {
-  display: flex;
   height: 100%;
   gap: 16px;
   flex: 1;
-  flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {

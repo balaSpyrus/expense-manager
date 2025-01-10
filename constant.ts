@@ -39,8 +39,8 @@ export const PALETTE = {
         "shopping": "rgba(230, 245, 152, 1)",
         "rent": "rgba(171, 221, 164, 1)",
         "transportation": "rgba(102, 194, 165, 1)",
+        "groceries": "rgba(94, 79, 162, 1)",
         "dining": "rgba(50, 136, 189, 1)",
-        "groceries": "rgba(94, 79, 162, 1)"
     },
     "payment_mode": {
         "bank_transfer": "rgba(158, 1, 66, 1)",

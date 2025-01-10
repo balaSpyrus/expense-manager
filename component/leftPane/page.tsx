@@ -1,12 +1,22 @@
-import ExpenseStats from "@/component/expenseStats";
+import PieChart from "@/component/chart/expenseStats";
 import { ExpenseObjType } from "@/types";
 import styles from "./leftpane.module.css";
+import { Grid2 } from "@mui/material";
 
 const expType = ["expense", "income"] as const;
 
 const LeftPane = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   return (
-    <section className={styles.left_pane}>
+    <Grid2
+      size={{
+        sm: 12,
+        md: 5,
+        lg: 4,
+      }}
+      display={"flex"}
+      flexDirection={"column"}
+      className={styles.left_pane}
+    >
       <h3 className={styles.title}>Expense Distribution</h3>
       <div className={styles.amt_container}>
         {expType.map((type) => (
@@ -25,8 +35,8 @@ const LeftPane = ({ expenses }: { expenses: ExpenseObjType[] }) => {
           </span>
         ))}
       </div>
-      <ExpenseStats expenses={expenses} />
-    </section>
+      <PieChart expenses={expenses} />
+    </Grid2>
   );
 };
 

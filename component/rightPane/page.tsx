@@ -2,6 +2,7 @@ import ExpenseList from "@/component/expense-list";
 import { Filter } from "@/component/filter";
 import { ExpenseObjType, FilterAttrType } from "@/types";
 import styles from "./rightpane.module.css";
+import { Grid2 } from "@mui/material";
 
 const RightPane = ({
   expenses,
@@ -11,10 +12,19 @@ const RightPane = ({
   onFilterChange: (attr: FilterAttrType, value: string) => void;
 }) => {
   return (
-    <section className={styles.right_pane}>
+    <Grid2
+      size={{
+        sm: 12,
+        md: 7,
+        lg: 8,
+      }}
+      display={"flex"}
+      flexDirection={"column"}
+      className={styles.right_pane}
+    >
       <Filter onCategoryChange={onFilterChange} />
       <ExpenseList expenses={expenses} />
-    </section>
+    </Grid2>
   );
 };
 

@@ -1,13 +1,15 @@
 "use client";
 import { ExpenseObjType, FilterAttrType } from "@/types";
 import { useState } from "react";
-import Dropdown from "./atoms/dropdown";
-import { ExpensePieChart } from "./chart/pieChart";
+import Dropdown from "../atoms/dropdown";
+import { ExpensePieChart } from "./pieChart";
 
-const ExpenseStats = ({ expenses }: { expenses: ExpenseObjType[] }) => {
+const PieChart = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   const [selected, setSelected] = useState<FilterAttrType>("category");
 
-  const onChange = (value: string) => setSelected(value as FilterAttrType);
+  const onChange = (value: string) => {
+    setSelected(value as FilterAttrType);
+  };
 
   return (
     <>
@@ -22,4 +24,4 @@ const ExpenseStats = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   );
 };
 
-export default ExpenseStats;
+export default PieChart;
