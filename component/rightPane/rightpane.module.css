@@ -1,7 +1,6 @@
 .right_pane {
   height: 100%;
   gap: 16px;
-  flex: 1;
 }
 
 @media screen and (max-width: 768px) {

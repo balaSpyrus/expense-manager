@@ -11,10 +11,14 @@ const LeftPane = ({ expenses }: { expenses: ExpenseObjType[] }) => {
       size={{
         sm: 12,
         md: 5,
-        lg: 4,
       }}
-      display={"flex"}
-      flexDirection={"column"}
+      sx={{
+        "& > *": {
+          width: "100%",
+        },
+      }}
+      container
+      height={"100%"}
       className={styles.left_pane}
     >
       <h3 className={styles.title}>Expense Distribution</h3>

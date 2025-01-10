@@ -15,10 +15,10 @@ const RightPane = ({
     <Grid2
       size={{
         sm: 12,
-        md: 7,
-        lg: 8,
+        md: 6,
       }}
-      display={"flex"}
+      container
+      height={"100%"}
       flexDirection={"column"}
       className={styles.right_pane}
     >

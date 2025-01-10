@@ -199,7 +199,7 @@ export const ExpensePieChart = ({
   if (!chartData) return <span id="pie-chart" className="loading" />;
 
   return (
-    <ResponsiveContainer width="100%" height="100%" id="pie-chart">
+    <ResponsiveContainer width="100%" height="50%" id="pie-chart">
       <PieChart>
         <Pie
           activeIndex={activeIndex}

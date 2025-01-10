@@ -2,14 +2,14 @@
 import { filterExpenses } from "@/lib";
 import { useUserDetails } from "@/lib/hook";
 import { ExpenseObjType, FilterAttrType } from "@/types";
+import { Grid2 } from "@mui/material";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 import AddBtn from "./addBtn";
 import AddExpense from "./addExpense/addExpense";
-import LeftPane from "./leftPane/page";
-import RightPane from "./rightPane/page";
+import LeftPane from "./leftPane";
+import RightPane from "./rightPane";
 import ThemeProvider from "./themeProvider";
-import { Grid2 } from "@mui/material";
 
 const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   const { user, isLoading } = useUserDetails();
@@ -44,11 +44,12 @@ const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
     <ThemeProvider>
       <Grid2
         container
+        flexDirection={"column"}
         gap={"2rem"}
         sx={{
-          height: "100%",
           p: "2rem",
         }}
+        height={"100%"}
       >
         {showAdd && <AddExpense />}
         <LeftPane expenses={filteredExpenses} />
