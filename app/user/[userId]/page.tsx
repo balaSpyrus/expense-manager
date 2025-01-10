@@ -8,7 +8,6 @@ const UserDetails = ({ params }: { params: Promise<{ userId: string }> }) => {
   const { user, isLoading } = useUserDetails();
   const defParams = use(params);
 
-  console.log(user);
   if (!user && !isLoading) {
     redirect("/");
   }

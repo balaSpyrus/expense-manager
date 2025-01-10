@@ -10,6 +10,5 @@ export async function GET(request: NextRequest) {
         headers: requestHeaders
     })
     const stats = await data.json()
-    console.log(stats)
     return Response.json(stats)
 }
