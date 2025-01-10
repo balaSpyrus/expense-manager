@@ -5,6 +5,7 @@ import { SummaryType } from "@/types";
 import { useEffect, useState } from "react";
 
 const getDashboardStats = async () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let stats: Record<string, any> = {};
   try {
     const res = await fetch((process.env.URL ?? "") + "/api/dashboard", {
