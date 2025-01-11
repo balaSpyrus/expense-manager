@@ -11,6 +11,7 @@ import {
 } from "react-virtualized";
 import "react-virtualized/styles.css";
 import ExpenseCard from "./expenseCard";
+import { useMediaQuery } from "@mui/material";
 // import { fetchExpenses } from "@/lib";
 
 interface Props {
@@ -19,6 +20,7 @@ interface Props {
 
 const ExpenseList: FC<Props> = ({ expenses: expenseProps }) => {
   const [expenses, setExpenses] = useState<ExpenseObjType[]>([]);
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   // const [rowCount] = useState(expenses.length);
   const cache = new CellMeasurerCache({
     fixedWidth: true,
@@ -91,7 +93,7 @@ const ExpenseList: FC<Props> = ({ expenses: expenseProps }) => {
         <AutoSizer>
           {({ width, height }) => (
             <List
-              height={height - 85}
+              height={isSmallScreen ? 550 : height - 96}
               onRowsRendered={onRowsRendered}
               ref={registerChild}
               rowCount={expenseProps.length}

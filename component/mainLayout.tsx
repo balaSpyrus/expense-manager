@@ -2,11 +2,11 @@
 import { filterExpenses } from "@/lib";
 import { useUserDetails } from "@/lib/hook";
 import { ExpenseObjType, FilterAttrType } from "@/types";
-import { Grid2 } from "@mui/material";
+import { Drawer, Grid2 } from "@mui/material";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 import AddBtn from "./addBtn";
-import AddExpense from "./addExpense/addExpense";
+import AddExpense from "./addExpense";
 import LeftPane from "./leftPane";
 import RightPane from "./rightPane";
 import ThemeProvider from "./themeProvider";
@@ -45,14 +45,24 @@ const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
       <Grid2
         container
         flexDirection={"column"}
-        gap={"1rem"}
+        spacing={3}
         sx={{
-          p: "2rem",
+          p: 3,
+          // overflow: "hidden",
+          "& > .MuiGrid2-root": {
+            p: 2,
+            borderRadius: 2,
+            height: "100%",
+            background: (theme) => theme.palette.background.paper,
+          },
+          flexDirection: (theme) =>
+            theme.breakpoints.down("md") ? "row" : "unset",
         }}
         height={"100%"}
-        className={"main-layout"}
       >
-        {showAdd && <AddExpense />}
+        <Drawer anchor="left" open={showAdd} onClose={onClick}>
+          <AddExpense />
+        </Drawer>
         <LeftPane expenses={filteredExpenses} />
         <RightPane expenses={filteredExpenses} onFilterChange={onChange} />
         <AddBtn onClick={onClick} />

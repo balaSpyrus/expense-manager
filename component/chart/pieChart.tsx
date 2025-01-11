@@ -3,7 +3,7 @@
 import { getChartData } from "@/lib";
 import { ChartData, ExpenseObjType, FilterAttrType } from "@/types";
 import { formatCurrency, toTitleCase } from "@/utils";
-import { useMediaQuery, useTheme } from "@mui/material";
+import { alpha, useMediaQuery, useTheme } from "@mui/material";
 import React, { useCallback, useEffect, useState } from "react";
 import {
   Cell,
@@ -66,8 +66,11 @@ export const ExpensePieChart: React.FC<{
   return (
     <ResponsiveContainer
       width="100%"
-      height={isSmallScreen ? 300 : 400}
+      height={"100%"}
       id="pie-chart"
+      style={{
+        background: alpha(theme.palette.primary.main, 0.08),
+      }}
     >
       <PieChart>
         <Pie
@@ -76,8 +79,8 @@ export const ExpensePieChart: React.FC<{
           data={chartData}
           cx="50%"
           cy="50%"
-          innerRadius={isSmallScreen ? "40%" : "50%"}
-          outerRadius={isSmallScreen ? "60%" : "70%"}
+          innerRadius={isSmallScreen ? "40%" : "30%"}
+          outerRadius={isSmallScreen ? "60%" : "50%"}
           dataKey="amount"
           nameKey="label"
           onMouseEnter={onPieEnter}

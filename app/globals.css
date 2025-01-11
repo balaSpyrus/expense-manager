@@ -37,11 +37,6 @@ a {
   height: 100vh;
 }
 
-.nav-bar {
-  background-color: rgb(var(--foreground), 0.18);
-  color: rgb(var(--foreground));
-}
-
 .loading-items {
   min-height: 100px;
   padding: 0.5rem;
@@ -58,8 +53,7 @@ a {
 }
 
 #pie-chart {
-  background-color: rgb(var(--foreground), 0.06);
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 #pie-chart.loading {
@@ -116,12 +110,6 @@ a {
   }
 }
 
-@media (prefers-color-scheme: light) {
-  #pie-chart {
-    background-color: rgb(var(--background), 0.5);
-  }
-}
-
 @keyframes loadingAnimation {
   0% {
     opacity: 0.5;
@@ -131,17 +119,5 @@ a {
   }
   100% {
     opacity: 0.5;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #pie-chart {
-    min-height: 400px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .main-layout {
-    flex-direction: row;
   }
 }

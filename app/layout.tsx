@@ -26,7 +26,7 @@ export default function RootLayout({
         <NavBar />
         <main
           style={{
-            height: "calc(100% - 80px",
+            height: "calc(100% - 64px)",
           }}
         >
           {children}

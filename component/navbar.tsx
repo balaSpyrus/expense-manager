@@ -16,6 +16,7 @@ import {
   useTheme,
   useMediaQuery,
   Box,
+  alpha,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -24,7 +25,7 @@ import { Login, Logout } from "@mui/icons-material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/hook";
-import ThemeProvider from "../themeProvider";
+import ThemeProvider from "./themeProvider";
 import { ROUTES } from "@/constant";
 
 const NavBar = () => {
@@ -107,7 +108,13 @@ const NavBar = () => {
 
   return (
     <ThemeProvider>
-      <AppBar position="static" className="nav-bar">
+      <AppBar
+        position="static"
+        sx={{
+          background: (theme) => alpha(theme.palette.primary.main, 0.08),
+          color: (theme) => theme.palette.text.primary,
+        }}
+      >
         <Toolbar>
           <Typography
             variant={isMobile ? "body1" : "h6"}
@@ -149,9 +156,7 @@ const NavBar = () => {
                 src={user.photoURL ?? undefined}
                 alt={user.displayName ?? ""}
                 sx={{ width: 32, height: 32 }}
-              >
-                {user.displayName?.charAt(0)}
-              </Avatar>
+              />
             ) : (
               <AccountCircleOutlinedIcon />
             )}
