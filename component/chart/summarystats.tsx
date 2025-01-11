@@ -104,6 +104,7 @@ const PieChartTooltip = ({ active, payload }: any) => {
 export function SummaryChart({ data }: SummaryChartProps) {
   const theme = useTheme();
   const smallScreen = useMediaQuery((theme) => theme.breakpoints.down("md"));
+  const mobileScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   const [timePeriod, setTimePeriod] = useState<TimePeriod>("this_month");
   const [selectedData, setSelectedData] = useState<SummaryData>(
@@ -189,7 +190,8 @@ export function SummaryChart({ data }: SummaryChartProps) {
             sx={{ height: 300, flex: 1 }}
             size={{
               md: 8,
-              sm: 12,
+              sm: 8,
+              xs: 12,
             }}
           >
             <ResponsiveContainer width="100%" height="100%">
@@ -199,7 +201,7 @@ export function SummaryChart({ data }: SummaryChartProps) {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  outerRadius={120}
+                  outerRadius={mobileScreen ? 80 : 120}
                   dataKey="percentage"
                 >
                   {selectedData.top_expense_category.map((entry, index) => (
@@ -216,7 +218,8 @@ export function SummaryChart({ data }: SummaryChartProps) {
           <Grid
             size={{
               md: 4,
-              sm: 12,
+              sm: 4,
+              xs: 12,
             }}
           >
             {selectedData.top_expense_category.map((category, index) => (

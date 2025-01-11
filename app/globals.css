@@ -38,25 +38,8 @@ a {
 }
 
 .nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
   background-color: rgb(var(--foreground), 0.18);
-}
-
-.nav-bar h1 {
-  font-size: 1.5rem;
-}
-
-.nav-bar ul {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.nav-bar ul li {
-  list-style: none;
+  color: rgb(var(--foreground));
 }
 
 .loading-items {
@@ -154,5 +137,11 @@ a {
 @media screen and (max-width: 480px) {
   #pie-chart {
     min-height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-layout {
+    flex-direction: row;
   }
 }

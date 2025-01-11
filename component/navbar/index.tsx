@@ -1,145 +1,164 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import auth from "@/auth";
-import { useUserDetails } from "@/lib/hook";
-import { Login, Logout } from "@mui/icons-material";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import ConstructionIcon from "@mui/icons-material/Construction";
+import React, { useState } from "react";
 import {
+  AppBar,
+  Toolbar,
+  Typography,
   Button,
-  Divider,
-  ListItemIcon,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
   ListItemText,
   Menu,
   MenuItem,
-  Typography,
+  Avatar,
+  useTheme,
+  useMediaQuery,
+  Box,
 } from "@mui/material";
-import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
-import Image from "next/image";
+import MenuIcon from "@mui/icons-material/Menu";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import { Login, Logout } from "@mui/icons-material";
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { useState } from "react";
-import styles from "./navbar.module.css";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/lib/hook";
 import ThemeProvider from "../themeProvider";
-
-const provider = new GoogleAuthProvider();
+import { ROUTES } from "@/constant";
 
 const NavBar = () => {
-  const { user } = useUserDetails();
+  const { user, login, logout } = useAuth();
+  const router = useRouter();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+
+  const handleDrawerToggle = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
+  const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = (value?: string) => {
-    setAnchorEl(null);
 
-    switch (value) {
-      case "settings":
-        redirect(`/user/${user?.uid}`);
-      case "login":
-      case "logout":
-        if (user) {
-          signOut(auth);
-        } else {
-          signInWithPopup(auth, provider)
-            .then((result) => {
-              const credential =
-                GoogleAuthProvider.credentialFromResult(result);
-              const token = credential?.accessToken;
-              const user = result.user;
-              setTimeout(() => redirect("/dashboard"), 1000);
-            })
-            .catch((error) => {
-              const errorCode = error.code;
-              const errorMessage = error.message;
-              const email = error.customData.email;
-              const credential = GoogleAuthProvider.credentialFromError(error);
-            });
-        }
-        break;
-      default:
-        break;
-    }
+  const handleMenuClose = () => {
+    setAnchorEl(null);
   };
+
+  const handleLogin = async () => {
+    await login();
+    handleMenuClose();
+    router.push("/dashboard");
+  };
+
+  const handleLogout = async () => {
+    await logout();
+    handleMenuClose();
+    router.push("/");
+  };
+
+  const handleSettings = () => {
+    handleMenuClose();
+    router.push(`/user/${user?.uid}`);
+  };
+
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      open={Boolean(anchorEl)}
+      onClose={handleMenuClose}
+    >
+      {user && (
+        <MenuItem onClick={handleSettings}>
+          <ConstructionIcon fontSize="small" sx={{ mr: 1 }} />
+          Account Settings
+        </MenuItem>
+      )}
+      <MenuItem onClick={user ? handleLogout : handleLogin}>
+        {user ? (
+          <Logout fontSize="small" sx={{ mr: 1 }} />
+        ) : (
+          <Login fontSize="small" sx={{ mr: 1 }} />
+        )}
+        {user ? "Logout" : "Login"}
+      </MenuItem>
+    </Menu>
+  );
+
+  const renderDrawer = (
+    <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
+      <List>
+        {ROUTES.map((item) => (
+          <ListItem
+            key={item.text}
+            component={Link}
+            href={item.href}
+            onClick={handleDrawerToggle}
+          >
+            <ListItemText primary={item.text} />
+          </ListItem>
+        ))}
+      </List>
+    </Drawer>
+  );
 
   return (
     <ThemeProvider>
-      <nav className="nav-bar">
-        <h1>
-          <Link href="/">Expense Manager</Link>
-        </h1>
-        <ul>
-          <li>
-            <Link href="/dashboard">Dashboard</Link>
-          </li>{" "}
-          <li>
-            <Link href="/dashboard-v2">Dashboard V2</Link>
-          </li>
-          <li>
-            <Link href="/configure">Configure</Link>
-          </li>
-          <li>
-            <Button
-              id="basic-button"
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-              sx={{
-                color: "rgb(var(--foreground))",
-              }}
-            >
-              {user ? (
-                <>
-                  <Image
-                    className={styles.avatar}
-                    src={user.photoURL ?? ""}
-                    width={20}
-                    height={20}
-                    alt=""
-                  />
-                  <Typography variant="h1" fontWeight={600}>
-                    {user.displayName
-                      ?.split(" ")
-                      .map((each) => each.charAt(0))
-                      .join("")}
-                  </Typography>
-                </>
-              ) : (
-                <AccountCircleOutlinedIcon />
-              )}
-            </Button>
-            <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={() => handleClose()}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
-            >
-              <MenuItem onClick={() => handleClose("settings")}>
-                <ListItemIcon>
-                  <ConstructionIcon fontSize="small" color="primary" />
-                </ListItemIcon>
-                <ListItemText>Account Settings</ListItemText>
-              </MenuItem>
-              <Divider />
-              <MenuItem onClick={() => handleClose(user ? "logout" : "login")}>
-                <ListItemIcon>
-                  {user ? (
-                    <Logout fontSize="small" color="primary" />
-                  ) : (
-                    <Login fontSize="small" color="primary" />
-                  )}
-                </ListItemIcon>
-                {user ? "Logout" : "Login"}
-              </MenuItem>
-            </Menu>
-          </li>
-        </ul>
-      </nav>
+      <AppBar position="static" className="nav-bar">
+        <Toolbar>
+          <Typography
+            variant={isMobile ? "body1" : "h6"}
+            component={Link}
+            href="/"
+            sx={{ flexGrow: 1, textDecoration: "none", color: "inherit" }}
+          >
+            Expense Manager
+          </Typography>
+          {isMobile ? (
+            <>
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                onClick={handleDrawerToggle}
+              >
+                <MenuIcon />
+              </IconButton>
+              {renderDrawer}
+            </>
+          ) : (
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              {ROUTES.map((item) => (
+                <Button
+                  key={item.text}
+                  color="inherit"
+                  component={Link}
+                  href={item.href}
+                >
+                  {item.text}
+                </Button>
+              ))}
+            </Box>
+          )}
+          <IconButton color="inherit" onClick={handleMenuOpen} sx={{ ml: 2 }}>
+            {user ? (
+              <Avatar
+                src={user.photoURL ?? undefined}
+                alt={user.displayName ?? ""}
+                sx={{ width: 32, height: 32 }}
+              >
+                {user.displayName?.charAt(0)}
+              </Avatar>
+            ) : (
+              <AccountCircleOutlinedIcon />
+            )}
+          </IconButton>
+          {renderMenu}
+        </Toolbar>
+      </AppBar>
     </ThemeProvider>
   );
 };

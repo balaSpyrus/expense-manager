@@ -9,8 +9,9 @@ const LeftPane = ({ expenses }: { expenses: ExpenseObjType[] }) => {
   return (
     <Grid2
       size={{
+        xs: 12,
         sm: 12,
-        md: 5,
+        md: 4,
       }}
       sx={{
         "& > *": {

@@ -45,11 +45,12 @@ const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
       <Grid2
         container
         flexDirection={"column"}
-        gap={"2rem"}
+        gap={"1rem"}
         sx={{
           p: "2rem",
         }}
         height={"100%"}
+        className={"main-layout"}
       >
         {showAdd && <AddExpense />}
         <LeftPane expenses={filteredExpenses} />

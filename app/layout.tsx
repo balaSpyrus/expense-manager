@@ -24,7 +24,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <NavBar />
-        <main style={{ height: "calc(100% - 80px" }}>{children}</main>
+        <main
+          style={{
+            height: "calc(100% - 80px",
+          }}
+        >
+          {children}
+        </main>
       </body>
     </html>
   );

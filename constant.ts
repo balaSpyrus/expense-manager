@@ -63,3 +63,8 @@ export const PALETTE = {
         typeof PAYMENT_MODES[number]
     ), string>>
 
+export const ROUTES = [
+    { text: "Dashboard", href: "/dashboard" },
+    { text: "Dashboard V2", href: "/dashboard-v2" },
+    { text: "Configure", href: "/configure" },
+];
