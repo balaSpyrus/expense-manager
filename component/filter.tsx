@@ -49,13 +49,27 @@ export const Filter = ({
           htmlFor={type}
           spacing={2}
           alignItems={"center"}
-          justifyContent={isSmallScreen ? "space-between" : "unset"}
         >
-          <Grid2 component={"span"}>Filter by {toTitleCase(type)} :</Grid2>
-          <Grid2>
+          <Grid2
+            size={{
+              xs: isSmallScreen ? 12 : "auto",
+            }}
+            component={"span"}
+          >
+            Filter by {toTitleCase(type)} :
+          </Grid2>
+          <Grid2
+            size={{
+              xs: isSmallScreen ? 12 : "auto",
+            }}
+          >
             <Dropdown
               titleCase
               id={type}
+              style={{
+                width: "100%",
+                margin: 0,
+              }}
               value={cache[type] || ""}
               onChange={(value) => {
                 onCategoryChange(type as FilterAttrType, value);

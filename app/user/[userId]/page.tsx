@@ -1,11 +1,11 @@
 "use client";
-import { useUserDetails } from "@/lib/hook";
+import { useAuth } from "@/lib/hook";
 import React, { use } from "react";
 import styles from "./userDetails.module.css";
 import { redirect } from "next/navigation";
 
 const UserDetails = ({ params }: { params: Promise<{ userId: string }> }) => {
-  const { user, isLoading } = useUserDetails();
+  const { user, isLoading } = useAuth();
   const defParams = use(params);
 
   if (!user && !isLoading) {

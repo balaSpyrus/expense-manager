@@ -1,7 +1,9 @@
 "use client";
 import { SummaryChart } from "@/component/chart/summarystats";
 import ThemeProvider from "@/component/themeProvider";
+import { useAuth } from "@/lib/hook";
 import { SummaryType } from "@/types";
+import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const getDashboardStats = async () => {
@@ -22,6 +24,8 @@ const getDashboardStats = async () => {
 };
 
 const Page = () => {
+  const { user, isLoading } = useAuth();
+
   const [summaryData, setSummaryData] = useState<SummaryType | undefined>();
 
   useEffect(() => {
@@ -29,6 +33,12 @@ const Page = () => {
       setSummaryData(data.data.summary);
     });
   }, []);
+
+  useEffect(() => {
+    if (!user && !isLoading) {
+      redirect("/");
+    }
+  }, [user, isLoading]);
 
   if (!summaryData) {
     return <div className="loading">Loading...</div>;

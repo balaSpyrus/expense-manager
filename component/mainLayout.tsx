@@ -1,6 +1,6 @@
 "use client";
 import { filterExpenses } from "@/lib";
-import { useUserDetails } from "@/lib/hook";
+import { useAuth } from "@/lib/hook";
 import { ExpenseObjType, FilterAttrType } from "@/types";
 import { Drawer, Grid2 } from "@mui/material";
 import { redirect } from "next/navigation";
@@ -12,7 +12,7 @@ import RightPane from "./rightPane";
 import ThemeProvider from "./themeProvider";
 
 const MainLayout = ({ expenses }: { expenses: ExpenseObjType[] }) => {
-  const { user, isLoading } = useUserDetails();
+  const { user, isLoading } = useAuth();
   const [showAdd, setShowAdd] = useState(false);
   const [filteredExpenses, setFilteredExpenses] = useState(expenses);
   const [filterConfig, setFilterConfig] = useState<{
